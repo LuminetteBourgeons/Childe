@@ -1,6 +1,6 @@
 import discord
 from discord.ext import commands, tasks
-from discord.ext.commands import CommandNotFound
+'''from discord.ext.commands import CommandNotFound'''
 from keep_alive import keep_alive
 import os, asyncio
 from random import choice
@@ -11,7 +11,7 @@ presence= [
   discord.Activity(type=discord.ActivityType.playing, name=("with Luminette")),
   discord.Activity(type=discord.ActivityType.competing, name=("with Paidoru >:(")),
   discord.Activity(type=discord.ActivityType.watching, name=("Luminette ❤️")),
-  discord.Activity(type=discord.ActivityType.playing, name=("minet bucin sm mayo")),
+  discord.Activity(type=discord.ActivityType.watching, name=("minet bucin sm mayo")),
   discord.Activity(type=discord.ActivityType.watching, name=("Primordial World"))
 ]
 
@@ -33,11 +33,15 @@ bot.remove_command('help')
 
 @bot.command()
 async def help(ctx):
-    embed=discord.Embed(title="__*Childe's commands:*__", description="Prefix: `Ch! `, `ch! `, ✨new prefix: `+`✨\n🧡 Develop by: `Luminette#9466`, `Potatish#0666`\n<:PaimonHehe:843373207130079232> The next generation of __Paidoru__ (`Paimon#7192`) by `Nawaytes~#2470`\n‎‎‎", colour=discord.Color.orange())
+    embed=discord.Embed(title="__*Childe's commands:*__", description="Prefix: `Ch! `, `ch! `, ✨new prefix: `+`✨\n🧡 Develop by: `Luminette#9566`, `Potatish#0103`\n<:PaimonHehe:843373207130079232> The next generation of __Paidoru__ (`Paimon#7192`) by `Nawaytes~#2470`\n‎ ‎ ", colour=discord.Color.orange())
     embed.set_thumbnail(url='https://static.wikia.nocookie.net/gensin-impact/images/5/53/Character_Tartaglia_Thumb.png/revision/latest/smart/width/250/height/250?cb=20210213163935')
-    embed.add_field(name="<:Chchibi:843379361138737182>__Bot's invitation link:__<:Chchibi:843379361138737182>", value="https://discord.com/api/oauth2/authorize?client_id=806793987876192268&permissions=8&redirect_uri=http%3A%2F%2F127.0.0.1&scope=bot\n*as Administrator*\n\n***List of Commands:***", inline=False)
-    embed.add_field(name='__Help Commands__', value="on development, teehee", inline=False)
-    embed.add_field(name='__Support us ❤️__', value="<https://ko-fi.com/childe_bot>", inline=False)
+    embed.add_field(name="<:Chchibi:843379361138737182> __Bot's invitation link:__ <:Chchibi:843379361138737182>", value="https://discord.com/api/oauth2/authorize?client_id=806793987876192268&permissions=8&redirect_uri=http%3A%2F%2F127.0.0.1&scope=bot\n*as Administrator*\n\n***List of Commands:***", inline=False)
+    embed.add_field(name='<:pai1:845141679102754836> __Genshin Impact:__', value="‎ ‎ ‎ ‎ ・*Artifact info:* shows you informations about artifacts\n‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ `+ artifact <art. name>` / `+ a <art. name>`\n‎ ‎ ‎ ‎ ・*Weapon info:* shows you informations about weapons\n‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ `+ weapon <weap. name>` / `+ w <weap. name>`", inline=False)
+    embed.add_field(name='<:pai2:845141694541332481> __Fun:__', value="‎ ‎ ‎ ‎ ・*Rolling a dice:*\n‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ `+ roll` / `+ dice`\n‎ ‎ ‎ ‎ ・*Flipping a coin:*\n‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ `+ flip` / `+ coin`\n‎ ‎ ‎ ‎ ・*Ask 8ball:*\n‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ `+ 8ball <question>` / `+ ball8 <question>`\n‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ > I will answer your yes/no question :)", inline=False)
+    embed.add_field(name='<:pai3:845141711373598741> __Informations:__', value="‎ ‎ ‎ ‎ ・*Userinfo:* shows you informations about a user\n‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ `+ userinfo @user` / `+ userinfo`\n‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ > @user is optional\n‎ ‎ ‎ ‎ ・*Avatar:* shows you informations about a user's avatar\n‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ `+ avatar @user` / `+ avatar`\n‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ > @user is optional\n‎ ‎ ‎ ‎ ・*Serverinfo:* shows you informations about the server\n‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ `+ serverinfo`\n‎ ‎ ‎ ‎ ・*Servericon:* shows you the server icon\n‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ `+ servericon`", inline=False)
+    embed.add_field(name=' 🎨 __Miscellaneous:__', value="‎ ‎ ‎ ‎ ・*Help:* shows you this message\n‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ `+ help`\n‎ ‎ ‎ ‎ ・*Calculate:* I'll count for you :3\n‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ `+ calc <operation>` / `+ calculate <operation>`\n‎ ‎ ‎ ‎ ・*Picking out some choice:* I'll choose for you :3\n‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ `+ choose <opt. 1>|<opt.2>|<opt.3>|<...>` /\n‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ `+ pick <opt. 1>|<opt.2>|<opt.3>|<...>`\n‎ ‎ ‎ ‎ ・*Making regional texts:* simply turn `this` to 🇹 🇭 🇮 🇸\n‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ `+ regional <text>`\n‎ ‎ ‎ ‎ ・*Reminder:* \n‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ `+ reminder <time> <text>`\n‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ Example:`+ reminder 50m Cookies are ready!`", inline=False)
+    embed.add_field(name='🔈 __Voice Activity:__', value="‎ ‎ ‎ ‎ ・*Connect to a voice channel:* \n‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ `+ join`\n‎ ‎ ‎ ‎ ・*Disconnect from a voice channel:*\n‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ `+ leave`\n‎ ‎ ‎ ‎ ", inline=False)
+    embed.add_field(name='🧡__Support us 🧡__', value="<https://ko-fi.com/childe_bot>", inline=False)
     await ctx.send(embed=embed)
 
 @bot.command()
@@ -55,6 +59,7 @@ async def on_ready():
     await asyncio.sleep(5)
     await bot.change_presence(activity=discord.Activity(type=discord.ActivityType.competing, name=("development")))
     print('Childe is online.')
+'''
 @bot.event
 async def on_command_error(ctx, error):
         if isinstance(error, CommandNotFound):
@@ -74,6 +79,7 @@ async def on_command_error(ctx, error):
         raise error
         if isinstance(error, commands.MissingPermissions):
           await ctx.send(f"Looks like you don't have the permission 👀")
+'''
 @bot.event
 async def on_member_join(member):
     if member.guild.id == 786492151058923520:
@@ -81,7 +87,13 @@ async def on_member_join(member):
       await channel.send("Welcome, {} :heart:".format (member.mention))
     elif member.guild.id == 271215379311886336:
       channel = bot.get_channel(834013759516573707)
-      await channel.send("Welcome, {} :heart:".format (member.mention)) 
+      await channel.send("Welcome, {} :heart:".format (member.mention))
+    elif member.guild.id == 738709993238560899:
+      channel = bot.get_channel(765546060910166036)
+      await channel.send("Met datang di Rumah Mine, {} :heart:".format (member.mention)) 
+    elif member.guild.id == 747872613174608012:
+      channel = bot.get_channel(747872613686181991)
+      await channel.send("Selamat datang, {}! :D".format (member.mention))
     else:
       return
 @bot.event
