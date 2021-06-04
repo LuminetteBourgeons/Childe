@@ -6,8 +6,7 @@ class Info(commands.Cog):
       self.bot=bot
 
     @commands.command()
-    async def avatar(self, ctx, user: discord.User = None):
-        pass
+    async def avatar(self, ctx, user: discord.Member = None):
         if user is None:
             user = ctx.author
         embed = discord.Embed(title=f'{user.name}\'s avatar.',
@@ -16,8 +15,7 @@ class Info(commands.Cog):
         embed.set_image(url=user.avatar_url)
         await ctx.send(embed=embed)
     @commands.command()
-    async def userinfo(self, ctx, user: discord.User = None):
-        pass
+    async def userinfo(self, ctx, user: discord.Member = None):
         if user is None:
             user = ctx.author
         name = f'{user.name}'
