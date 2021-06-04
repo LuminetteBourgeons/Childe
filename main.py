@@ -2,7 +2,7 @@ import discord
 from discord.ext import commands, tasks
 '''from discord.ext.commands import CommandNotFound'''
 from keep_alive import keep_alive
-import os, asyncio
+import os, asyncio, time
 from random import choice
 
 presence= [
@@ -26,6 +26,7 @@ PREFIX = [
 
 intents = discord.Intents.all()
 intents.members = True
+intents.reactions = True
 
 bot = commands.Bot(command_prefix=PREFIX, case_insensitive=True, help_command=None, intents=intents)
 
@@ -33,7 +34,7 @@ bot.remove_command('help')
 
 @bot.command()
 async def help(ctx):
-    embed=discord.Embed(title="__*Childe's commands:*__", description="Prefix: `Ch! `, `ch! `, ✨new prefix: `+`✨\n🧡 Develop by: `Luminette#9566`, `Potatish#0103`\n<:PaimonHehe:843373207130079232> The next generation of __Paidoru__ (`Paimon#7192`) by `Nawaytes~#2470`\n‎ ‎ ", colour=discord.Color.orange())
+    embed=discord.Embed(title="__*Childe's commands:*__", description="Prefix: `Ch! `, `ch! `, ✨new prefix: `+`✨\n🧡 Develop by: `Luminette#9566`, `Luminette#0103`\n<:Chchibi:843379361138737182> With special help from: `Rin#5535`\n<:PaimonHehe:843373207130079232> The next generation of __Paidoru__ (`Paimon#7192`) by `Nawaytes~#2470`\n‎ ‎ ", colour=discord.Color.orange())
     embed.set_thumbnail(url='https://static.wikia.nocookie.net/gensin-impact/images/5/53/Character_Tartaglia_Thumb.png/revision/latest/smart/width/250/height/250?cb=20210213163935')
     embed.add_field(name="<:Chchibi:843379361138737182> __Bot's invitation link:__ <:Chchibi:843379361138737182>", value="https://discord.com/api/oauth2/authorize?client_id=806793987876192268&permissions=8&redirect_uri=http%3A%2F%2F127.0.0.1&scope=bot\n*as Administrator*\n\n***List of Commands:***", inline=False)
     embed.add_field(name='<:pai1:845141679102754836> __Genshin Impact:__', value="‎ ‎ ‎ ‎ ・*Artifact info:* shows you informations about artifacts\n‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ `+ artifact <art. name>` / `+ a <art. name>`\n‎ ‎ ‎ ‎ ・*Weapon info:* shows you informations about weapons\n‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ `+ weapon <weap. name>` / `+ w <weap. name>`", inline=False)
@@ -46,11 +47,11 @@ async def help(ctx):
 
 @bot.command()
 async def ownerhelp(ctx):
-    embed=discord.Embed(title="__Hello, Luminette 🧡__", description="My Prefix: `Ch! `, `ch! `, ✨new prefix: `+`✨", colour=discord.Color.orange())
-    embed.set_thumbnail(url='https://static.wikia.nocookie.net/gensin-impact/images/5/53/Character_Tartaglia_Thumb.png/revision/latest/smart/width/250/height/250?cb=20210213163935')
-    embed.add_field(name="__Your to do list on me:__", value="Fix the help command: add those `fun` command, fix the TUI\nAdd `1 piece tiara sets`\nFix weapons.json\n\n", inline=False)
-    await ctx.send(embed=embed)
-
+    if ctx.author.id == 809244553768861706 or ctx.author.id == 743042741461712897:
+        embed=discord.Embed(title="__Hello, Luminette 🧡__", description="My Prefix: `Ch! `, `ch! `, ✨new prefix: `+`✨", colour=discord.Color.orange())
+        embed.set_thumbnail(url='https://static.wikia.nocookie.net/gensin-impact/images/5/53/Character_Tartaglia_Thumb.png/revision/latest/smart/width/250/height/250?cb=20210213163935')
+        embed.add_field(name="__Your commands:__", value="Shows my active servers: `+servers`\nAuto presence changing: `+pstart` & `+pstop`\n", inline=False)
+        await ctx.send(embed=embed)
 @bot.event
 async def on_ready():
     channel = bot.get_channel(841614719562285086)
@@ -58,6 +59,8 @@ async def on_ready():
     await bot.change_presence(activity=discord.Activity(type=discord.ActivityType.competing, name=("booting...")))
     await asyncio.sleep(5)
     await bot.change_presence(activity=discord.Activity(type=discord.ActivityType.competing, name=("development")))
+    await asyncio.sleep(5)
+    await bot.change_presence(activity=discord.Activity(type=discord.ActivityType.listening, name=("Luminette")))
     print('Childe is online.')
 '''
 @bot.event
@@ -83,7 +86,7 @@ async def on_command_error(ctx, error):
 @bot.event
 async def on_member_join(member):
     if member.guild.id == 786492151058923520:
-      channel = bot.get_channel(794844425956229120)
+      channel = bot.get_channel(845166313134882866)
       await channel.send("Welcome, {} :heart:".format (member.mention))
     elif member.guild.id == 271215379311886336:
       channel = bot.get_channel(834013759516573707)
@@ -94,6 +97,10 @@ async def on_member_join(member):
     elif member.guild.id == 747872613174608012:
       channel = bot.get_channel(747872613686181991)
       await channel.send("Selamat datang, {}! :D".format (member.mention))
+    elif member.guild.id == 775568951101882398:
+      channel = bot.get_channel(775568951412523010)
+      embed=discord.Embed(title="<:paimonisfood:777925956630741043>",description="__ ׂׂૢ་༘࿐\n┊ ⋆ ┊ . ┊ ┊\n┊ ┊⋆ ┊ .\n┊ ┊ ⋆˚ ⁭ ⁭ ⁭ ⁭ ⁭ ⁭ ⁭ ⁭ ⁭\n✧. ┊ ⁭ ⁭ ⁭ ⁭ \n⁭ ⁭ ⁭ ⁭ ⁭⋆ ★\n⌒⌒⌒⌒⌒⌒⌒⌒⌒⌒⌒⌒⌒⌒⌒⌒⌒\n‹·˚ 𝐓𝐨𝐦𝐩𝐞𝐥𝐋 𝐃𝐢𝐬𝐜𝐨𝐫𝐝 𝐒𝐞𝐫𝐯𝐞𝐫 〄⋆̩\n︶︶︶︶︶︶︶︶︶︶︶︶︶︶ ೄྀ࿐ ˊ\n<:paimonisfood:777925956630741043> \n╰┈➤ Silahkan untuk ambil role , ada di <#775634842247364619> untuk menunjukkan sedikit informasi tentang dirimu, jadi member lain bisa kenal kamu lebih dekat 😉\n<:loveu:777925956379607080> \n╰┈➤ Mohon untuk membaca <#831462974011080734> agar kamu memahami peraturan yang berlaku di server TompelL.\n\n────────────────────────────────────────\n<:yaws:777925956257972234> Terima kasih! <:yaws:777925956257972234>\n")
+      await channel.send("Selamat datang di **Server Discord TompelL**, {} :heart:. <:ooogitu:813675925287469096> Silahkan untuk baca text dibawah ini ⬎".format (member.mention), embed=embed)
     else:
       return
 @bot.event
@@ -110,15 +117,24 @@ async def on_message(message):
 @bot.event
 async def on_command(ctx):
     channel = bot.get_channel(841906846389764146)
-    await channel.send(f"\n{ctx.author.name} used a command!\n`{ctx.message.content}`")
-
+    embed = discord.Embed(title=f"{ctx.author.name} used a command!", description=f"{ctx.message.content}")
+    await channel.send(embed=embed)
+@bot.event
+async def on_command_completion(ctx):
+    channel = bot.get_channel(841906846389764146)
+    await channel.send(f"Completed {ctx.author.name}'s command!\n`{ctx.message.content}`")
+@bot.command()
+async def aisha(ctx):
+  if ctx.author.id == 809244553768861706 or ctx.author.id == 743042741461712897:
+    await ctx.send ('sayang bimo')
 @bot.command()
 async def servers(ctx):
   if ctx.author.id == 809244553768861706 or ctx.author.id == 743042741461712897:
         await ctx.send("__**Childe's active servers:**__")
         activeservers = bot.guilds
         for guild in activeservers:
-            await ctx.send(f'Server name:`{guild.name}`,\nServer ID:`{guild.id}`,\nServer Owner:`{guild.owner}`\n ––––––––––––––––––––––––––––––')
+            await ctx.send(f'Server name:`{guild.name}`,\nServer ID:`{guild.id}`,\nServer Owner:`{guild.owner}`\nOwner ID :`{guild.owner.id}`\nMembers: `{guild.member_count}`')
+            await ctx.send('––––––––––––––––––––––––––––––––––––––––––––––––')
 
 @bot.command()
 async def say(ctx, *, msg):
@@ -151,14 +167,23 @@ async def pstop(ctx):
   else:
     await ctx.send("You are not allowed to use this command!")
 
+@bot.command()
+async def ping(ctx):
+    before = time.monotonic()
+    message = await ctx.send("🏓 Pong!")
+    ping = (time.monotonic() - before) * 1000
+    await message.edit(content=f"🏓 Pong!  `{int(ping)}ms`")
+    print(f'Ping {int(ping)}ms')
+
 extensions = ['cogs.genshin', 
               'cogs.miscellaneous', 
               'cogs.mod', 
               'cogs.reminder', 
               'cogs.voice', 
               'cogs.info', 
-              'cogs.fun'
+              'cogs.fun'     
 ]
+
 if __name__ == '__main__':
   for ext in extensions:
     bot.load_extension(ext)
