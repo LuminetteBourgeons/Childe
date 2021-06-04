@@ -6,8 +6,77 @@ with open('json/weapons.json') as json_file:
     f_weapons = json.load(json_file)
 with open('json/artifacts.json') as json_file:
     f_artifacts = json.load(json_file)
+with open('json/characters.json') as json_file:
+    f_characters = json.load(json_file)
 
 class Genshin(commands.Cog):
+    def embed_character(self,character):
+        stars = ''
+        for i in range(character['rarity']):
+            stars += ' ⭐'
+        embed = discord.Embed(title=character['name'], description=stars, color=discord.Colour.orange())
+        embed.set_author(name='Character details')
+        embed.set_image(url=character['img'])
+        embed.add_field(name='Element', value=character['element'], inline=True)
+        embed.add_field(name='Weapon', value=character['weapon'], inline=True)
+        embed.add_field(name='Constellation', value=character['constellation'], inline=False)
+        return embed
+    def embed_character2(self,character):
+        stars = ''
+        for i in range(character['rarity']):
+            stars += ' ⭐'
+        embed = discord.Embed(title=character['name2'], description=stars, color=discord.Colour.orange())
+        embed.add_field(name='Constellation', value=character['cons2'], inline=False)
+        return embed
+    @commands.command(name='chara')
+    async def cmd_character(self, ctx, *keyword):
+        keyword = ' '.join(keyword).lower()
+        count = 0
+        find_list = []
+        find_one = None
+        emoji = '⬇️'
+        for character in f_characters:
+            name = character['name'].lower()
+            if keyword.lower() == character['name'].lower():
+                embed = self.embed_character(character)
+                message = await ctx.send(embed=embed)
+                await message.add_reaction(emoji)
+                while True:
+                  reaction = await self.bot.wait_for_reaction(emoji="⬇️", message=message, timeout=30)
+                  embed = self.embed_character2(character)
+                  await message.edit(content=embed)
+                return
+            elif len(keyword) >= 4:
+                if name.find(keyword) >= 0:
+                    find_one = character
+                    find_list.append(character)
+                    count += 1
+        if count == 0:
+            embed = discord.Embed(
+                description="Character not found",
+                colour=discord.Colour.red()
+            )
+            await ctx.send(embed=embed)
+        elif count == 1:
+            embed = self.embed_character(find_one)
+            message = await ctx.send(embed=embed)
+            await message.add_reaction(emoji)
+            while True:
+              reaction = await self.bot.wait_for_reaction(emoji="⬇️", message=message)
+              embed = self.embed_character2(find_one)
+              await message.edit(content=embed)
+        else:
+            character_list = ''
+            for character in find_list:
+                character_list += f"{character['name']}\n"
+            embed = discord.Embed(color=discord.Colour.orange())
+            embed.set_author(name=f"{count} characters found\n"
+                                  f"Please choose one")
+            embed.add_field(name="Syntax : `+ chara {name}`", value=character_list, inline=False)
+            await ctx.send(embed=embed)
+        if count != 0:
+            return
+        
     def embed_weapon(self, weapon):
         stars = ''
         for i in range(weapon['rarity']):
@@ -34,7 +103,6 @@ class Genshin(commands.Cog):
             if keyword.lower() == weapon['name'].lower():
                 embed = self.embed_weapon(weapon)
                 await ctx.send(embed=embed)
-        
                 return
             elif len(keyword) >= 4:
                 if name.find(keyword) >= 0:
