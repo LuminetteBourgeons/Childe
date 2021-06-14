@@ -1,9 +1,9 @@
 import discord
 from discord.ext import commands, tasks
 '''from discord.ext.commands import CommandNotFound'''
-from keep_alive import keep_alive
 import os, asyncio, time
 from random import choice
+
 
 presence= [
   discord.Activity(type=discord.ActivityType.playing, name=("Develop by Luminette")),
@@ -12,7 +12,8 @@ presence= [
   discord.Activity(type=discord.ActivityType.competing, name=("with Paidoru >:(")),
   discord.Activity(type=discord.ActivityType.watching, name=("Luminette ❤️")),
   discord.Activity(type=discord.ActivityType.watching, name=("minet bucin sm mayo")),
-  discord.Activity(type=discord.ActivityType.watching, name=("Primordial World"))
+  discord.Activity(type=discord.ActivityType.watching, name=("Primordial World")),
+  discord.Activity(type=discord.ActivityType.watching, name=("TompelL Official"))
 ]
 
 PREFIX = [
@@ -34,54 +35,56 @@ bot.remove_command('help')
 
 @bot.command()
 async def help(ctx):
-    embed=discord.Embed(title="__*Childe's commands:*__", description="Prefix: `Ch! `, `ch! `, ✨new prefix: `+`✨\n🧡 Develop by: `Luminette#9566`, `Luminette#0103`\n<:Chchibi:843379361138737182> With special help from: `Rin#5535`\n<:PaimonHehe:843373207130079232> The next generation of __Paidoru__ (`Paimon#7192`) by `Nawaytes~#2470`\n‎ ‎ ", colour=discord.Color.orange())
-    embed.set_thumbnail(url='https://static.wikia.nocookie.net/gensin-impact/images/5/53/Character_Tartaglia_Thumb.png/revision/latest/smart/width/250/height/250?cb=20210213163935')
-    embed.add_field(name="<:Chchibi:843379361138737182> __Bot's invitation link:__ <:Chchibi:843379361138737182>", value="https://discord.com/api/oauth2/authorize?client_id=806793987876192268&permissions=8&redirect_uri=http%3A%2F%2F127.0.0.1&scope=bot\n*as Administrator*\n\n***List of Commands:***", inline=False)
-    embed.add_field(name='<:pai1:845141679102754836> __Genshin Impact:__', value="‎ ‎ ‎ ‎ ・*Artifact info:* shows you informations about artifacts\n‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ `+ artifact <art. name>` / `+ a <art. name>`\n‎ ‎ ‎ ‎ ・*Weapon info:* shows you informations about weapons\n‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ `+ weapon <weap. name>` / `+ w <weap. name>`", inline=False)
-    embed.add_field(name='<:pai2:845141694541332481> __Fun:__', value="‎ ‎ ‎ ‎ ・*Rolling a dice:*\n‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ `+ roll` / `+ dice`\n‎ ‎ ‎ ‎ ・*Flipping a coin:*\n‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ `+ flip` / `+ coin`\n‎ ‎ ‎ ‎ ・*Ask 8ball:*\n‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ `+ 8ball <question>` / `+ ball8 <question>`\n‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ > I will answer your yes/no question :)", inline=False)
-    embed.add_field(name='<:pai3:845141711373598741> __Informations:__', value="‎ ‎ ‎ ‎ ・*Userinfo:* shows you informations about a user\n‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ `+ userinfo @user` / `+ userinfo`\n‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ > @user is optional\n‎ ‎ ‎ ‎ ・*Avatar:* shows you informations about a user's avatar\n‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ `+ avatar @user` / `+ avatar`\n‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ > @user is optional\n‎ ‎ ‎ ‎ ・*Serverinfo:* shows you informations about the server\n‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ `+ serverinfo`\n‎ ‎ ‎ ‎ ・*Servericon:* shows you the server icon\n‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ `+ servericon`", inline=False)
-    embed.add_field(name=' 🎨 __Miscellaneous:__', value="‎ ‎ ‎ ‎ ・*Help:* shows you this message\n‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ `+ help`\n‎ ‎ ‎ ‎ ・*Calculate:* I'll count for you :3\n‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ `+ calc <operation>` / `+ calculate <operation>`\n‎ ‎ ‎ ‎ ・*Picking out some choice:* I'll choose for you :3\n‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ `+ choose <opt. 1>|<opt.2>|<opt.3>|<...>` /\n‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ `+ pick <opt. 1>|<opt.2>|<opt.3>|<...>`\n‎ ‎ ‎ ‎ ・*Making regional texts:* simply turn `this` to 🇹 🇭 🇮 🇸\n‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ `+ regional <text>`\n‎ ‎ ‎ ‎ ・*Reminder:* \n‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ `+ reminder <time> <text>`\n‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ Example:`+ reminder 50m Cookies are ready!`", inline=False)
-    embed.add_field(name='🔈 __Voice Activity:__', value="‎ ‎ ‎ ‎ ・*Connect to a voice channel:* \n‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ `+ join`\n‎ ‎ ‎ ‎ ・*Disconnect from a voice channel:*\n‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ `+ leave`\n‎ ‎ ‎ ‎ ", inline=False)
-    embed.add_field(name='🧡__Support us 🧡__', value="<https://ko-fi.com/childe_bot>", inline=False)
-    await ctx.send(embed=embed)
+  embed=discord.Embed(title="__*Childe's commands:*__", description="Prefix: `Ch! `, `ch! `, ✨new prefix: `+`✨\n🧡 Develop by: `Luminette#9566`, `Luminette#0103`\n<:Chchibi:843379361138737182> With special helps from: `Rin#5535`\n<:PaimonHehe:843373207130079232> The next generation of __Paidoru__ (`Paimon#7192`) by `Nawaytes~#2470`\n‎ ‎ ", colour=discord.Color.orange())
+  embed.set_thumbnail(url='https://static.wikia.nocookie.net/gensin-impact/images/5/53/Character_Tartaglia_Thumb.png/revision/latest/smart/width/250/height/250?cb=20210213163935')
+  embed.add_field(name="<:Chchibi:843379361138737182> __Bot's invitation link:__ <:Chchibi:843379361138737182>", value="https://discord.com/api/oauth2/authorize?client_id=806793987876192268&permissions=8&redirect_uri=http%3A%2F%2F127.0.0.1&scope=bot\n*as Administrator*\n\n***List of Commands:***", inline=False)
+  embed.add_field(name='<:pai1:845141679102754836> __Genshin Impact:__', value="‎ ‎ ‎ ‎ ・*Artifact info:* shows you informations about artifacts\n‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ `+ artifact <art. name>` / `+ a <art. name>`\n‎ ‎ ‎ ‎ ・*Weapon info:* shows you informations about weapons\n‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ `+ weapon <weap. name>` / `+ w <weap. name>`\n‎ ‎ ‎ ‎ ・*Experience:* Information about what you need for character's and weapon's exp\n‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ `+ exp`", inline=False)
+  embed.add_field(name='<:pai2:845141694541332481> __Fun:__', value="‎ ‎ ‎ ‎ ・*Rolling a dice:*\n‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ `+ roll` / `+ dice`\n‎ ‎ ‎ ‎ ・*Flipping a coin:*\n‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ `+ flip` / `+ coin`\n‎ ‎ ‎ ‎ ・*Ask 8ball:*\n‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ `+ 8ball <question>` / `+ ball8 <question>`\n‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ > I will answer your yes/no question :)\n‎ ‎ ‎ ‎ ・*Rock, Paper, Scissors:*\n‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ `+ rps`‎", inline=False)
+  embed.add_field(name='<:pai3:845141711373598741> __Informations:__', value="‎ ‎ ‎ ‎ ・*Userinfo:* shows you informations about a user\n‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ `+ userinfo @user` / `+ userinfo`\n‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ > @user is optional\n‎ ‎ ‎ ‎ ・*Avatar:* shows you informations about a user's avatar\n‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ `+ avatar @user` / `+ avatar`\n‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ > @user is optional\n‎ ‎ ‎ ‎ ・*Serverinfo:* shows you informations about the server\n‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ `+ serverinfo`\n‎ ‎ ‎ ‎ ・*Servericon:* shows you the server icon\n‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ `+ servericon`\n‎ ‎ ‎ ‎ ・*Permissions:* shows you the user's permissions in the server\n‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ `+ perms` / `+ permissions`", inline=False)
+  embed.add_field(name=' 🎨 __Miscellaneous:__', value="‎ ‎ ‎ ‎ ・*Help:* shows you this message\n‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ `+ help`\n‎ ‎ ‎ ‎ ・*Calculate:* I'll count for you :3\n‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ `+ calc <operation>` / `+ calculate <operation>`\n‎ ‎ ‎ ‎ ・*Picking out some choice:* I'll choose for you :3\n‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ `+ choose <opt. 1>|<opt.2>|<opt.3>|<...>` /\n‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ `+ pick <opt. 1>|<opt.2>|<opt.3>|<...>`\n‎ ‎ ‎ ‎ ・*Making regional texts:* simply turn `this` to 🇹 🇭 🇮 🇸\n‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ `+ regional <text>`\n‎ ‎ ‎ ‎ ・*Reminder:* \n‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ `+ reminder <time> <text>`\n‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ Example:`+ reminder 50m Cookies are ready!`\n‎ ‎ ‎ ‎ ・*Ping:* \n‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ `+ ping`", inline=False)
+  embed.add_field(name='🔈 __Voice Activity:__', value="‎ ‎ ‎ ‎ ・*Connect to a voice channel:* \n‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ `+ join`\n‎ ‎ ‎ ‎ ・*Disconnect from a voice channel:*\n‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ `+ leave`\n‎ ‎ ‎ ‎ ", inline=False)
+  embed.add_field(name='🧡__Support us 🧡__', value="<https://ko-fi.com/childe_bot>", inline=False)
+  embed.set_footer(text=f"Serving: {ctx.author.name}", icon_url=ctx.author.avatar_url)
+  await ctx.send(embed=embed)
 
 @bot.command()
 async def ownerhelp(ctx):
-    if ctx.author.id == 809244553768861706 or ctx.author.id == 743042741461712897:
-        embed=discord.Embed(title="__Hello, Luminette 🧡__", description="My Prefix: `Ch! `, `ch! `, ✨new prefix: `+`✨", colour=discord.Color.orange())
-        embed.set_thumbnail(url='https://static.wikia.nocookie.net/gensin-impact/images/5/53/Character_Tartaglia_Thumb.png/revision/latest/smart/width/250/height/250?cb=20210213163935')
-        embed.add_field(name="__Your commands:__", value="Shows my active servers: `+servers`\nAuto presence changing: `+pstart` & `+pstop`\n", inline=False)
-        await ctx.send(embed=embed)
+  if ctx.author.id == 809244553768861706 or ctx.author.id == 743042741461712897:
+    embed=discord.Embed(title="__Hello, Luminette 🧡__", description="My Prefix: `Ch! `, `ch! `, ✨new prefix: `+`✨", colour=discord.Color.orange())
+    embed.set_thumbnail(url='https://static.wikia.nocookie.net/gensin-impact/images/5/53/Character_Tartaglia_Thumb.png/revision/latest/smart/width/250/height/250?cb=20210213163935')
+    embed.add_field(name="__Your commands:__", value="Shows my active servers: `+servers`\nAuto presence changing: `+pstart` & `+pstop`\n", inline=False)
+    await ctx.send(embed=embed)
+
 @bot.event
 async def on_ready():
-    channel = bot.get_channel(841614719562285086)
-    await channel.send('Rebooting')
-    await bot.change_presence(activity=discord.Activity(type=discord.ActivityType.competing, name=("booting...")))
-    await asyncio.sleep(5)
-    await bot.change_presence(activity=discord.Activity(type=discord.ActivityType.competing, name=("development")))
-    await asyncio.sleep(5)
-    await bot.change_presence(activity=discord.Activity(type=discord.ActivityType.listening, name=("Luminette")))
-    print('Childe is online.')
+  channel = bot.get_channel(841614719562285086)
+  await channel.send('Rebooting')
+  await bot.change_presence(activity=discord.Activity(type=discord.ActivityType.competing, name=("booting...")))
+  await asyncio.sleep(5)
+  await bot.change_presence(activity=discord.Activity(type=discord.ActivityType.competing, name=("development")))
+  await asyncio.sleep(5)
+  await bot.change_presence(activity=discord.Activity(type=discord.ActivityType.listening, name=("Luminette")))
+  print('Childe is online.')
 '''
 @bot.event
 async def on_command_error(ctx, error):
-        if isinstance(error, CommandNotFound):
-            await ctx.send(f'Command not found! Use `+help` for the list of commands!')
-            return
-        if isinstance(error, commands.CheckFailure):
-            return
-        if isinstance(error, commands.ChannelNotFound):
-            await ctx.send(f'Channel not found!', delete_after=7)
-            return
-        if isinstance(error, commands.MemberNotFound):
-            await ctx.send(f'Member not found!', delete_after=7)
-            return
-        if isinstance(error, commands.errors.CommandInvokeError):
-            await ctx.send(f'Error :(', delete_after=7)
-            return
-        raise error
-        if isinstance(error, commands.MissingPermissions):
-          await ctx.send(f"Looks like you don't have the permission 👀")
+  if isinstance(error, CommandNotFound):
+    await ctx.send(f'Command not found! Use `+help` for the list of commands!')
+    return
+  if isinstance(error, commands.CheckFailure):
+    return
+  if isinstance(error, commands.ChannelNotFound):
+    await ctx.send(f'Channel not found!', delete_after=7)
+    return
+  if isinstance(error, commands.MemberNotFound):
+    await ctx.send(f'Member not found!', delete_after=7)
+    return
+  if isinstance(error, commands.MissingPermissions):
+    await ctx.send(f"Looks like you don't have the permission 👀")
+  if isinstance(error, commands.errors.CommandInvokeError):
+    await ctx.send(f'Error :(', delete_after=7)
+    return
+  raise error
 '''
 @bot.event
 async def on_member_join(member):
@@ -106,35 +109,32 @@ async def on_member_join(member):
 @bot.event
 async def on_message(message):
     if message.author == bot.user:
-        return
+      return
     await bot.process_commands(message)
     if message.content.lower().startswith('hello'):
-        await message.channel.send('Hi, {0.author.mention} !'.format(message))
-        await bot.process_commands(message)
+      if message.channel.id == 775568951844405250:
+        return
+      await message.channel.send('Hi, {0.author.mention} !'.format(message))
+      await bot.process_commands(message)
     if message.content.lower().startswith('childe?'):
-        await message.channel.send('Hey girlie, hold still')
+      await message.channel.send('Hey girlie, hold still')
+      await bot.process_commands(message)
+    if message.type.name in ['premium_guild_subscription', 'premium_guild_tier_1', 'premium_guild_tier_2', 'premium_guild_tier_3']:
+      if message.guild.id == 775568951101882398:
+        embed = discord.Embed( colour=discord.Colour.orange(),description=f"**{message.author.name}**, Terimakasih telah boost server kami! <:02love:852123836366323712>")
+        channel = bot.get_channel(775580161897660436)
+        await channel.send(embed=embed)
         await bot.process_commands(message)
 @bot.event
 async def on_command(ctx):
-    channel = bot.get_channel(841906846389764146)
-    embed = discord.Embed(title=f"{ctx.author.name} used a command!", description=f"{ctx.message.content}")
-    await channel.send(embed=embed)
+  channel = bot.get_channel(841906846389764146)
+  embed = discord.Embed(title=f"<:Chchibi:843379361138737182> {ctx.author.name} used a command!", description=f"{ctx.message.content}",colour=discord.Color.orange())
+  await channel.send('––––––––––––––––––––––––––––––––––––––––––––––––',embed=embed)
 @bot.event
 async def on_command_completion(ctx):
-    channel = bot.get_channel(841906846389764146)
-    await channel.send(f"Completed {ctx.author.name}'s command!\n`{ctx.message.content}`")
-@bot.command()
-async def aisha(ctx):
-  if ctx.author.id == 809244553768861706 or ctx.author.id == 743042741461712897:
-    await ctx.send ('sayang bimo')
-@bot.command()
-async def servers(ctx):
-  if ctx.author.id == 809244553768861706 or ctx.author.id == 743042741461712897:
-        await ctx.send("__**Childe's active servers:**__")
-        activeservers = bot.guilds
-        for guild in activeservers:
-            await ctx.send(f'Server name:`{guild.name}`,\nServer ID:`{guild.id}`,\nServer Owner:`{guild.owner}`\nOwner ID :`{guild.owner.id}`\nMembers: `{guild.member_count}`')
-            await ctx.send('––––––––––––––––––––––––––––––––––––––––––––––––')
+  channel = bot.get_channel(841906846389764146)
+  embed = discord.Embed(title=f"<:Chchibi:843379361138737182> Completed {ctx.author.name}'s command!", description=f"{ctx.message.content}",colour=discord.Color.gold())
+  await channel.send(embed=embed)
 
 @bot.command()
 async def say(ctx, *, msg):
@@ -142,16 +142,25 @@ async def say(ctx, *, msg):
     await ctx.message.delete()
     await ctx.send(msg)
 
+@bot.command()
+async def servers(ctx):
+  if ctx.author.id == 809244553768861706 or ctx.author.id == 743042741461712897:
+    await ctx.send("<:Chchibi:843379361138737182>__**Childe's active servers:**__<:Chchibi:843379361138737182>")
+    activeservers = bot.guilds
+    for guild in activeservers:
+      await ctx.send(f'Server name:`{guild.name}`,\nServer ID:`{guild.id}`,\nServer Owner:`{guild.owner}`\nOwner ID :`{guild.owner.id}`\nMembers: `{guild.member_count}`')
+      await ctx.send('––––––––––––––––––––––––––––––––––––––––––––––––')
+
 @tasks.loop(minutes=5)
 async def presence_change():
-    await asyncio.sleep(10)
-    await bot.change_presence(activity=choice(presence))
-    channel = bot.get_channel(841614719562285086)
-    await channel.send('Changing Presence')
-    print("Changing Presence")
+  await asyncio.sleep(10)
+  await bot.change_presence(activity=choice(presence))
+  channel = bot.get_channel(841614719562285086)
+  await channel.send('Changing Presence')
+  print("Changing Presence")
 @presence_change.before_loop
 async def presence_change_before():
-    await bot.wait_until_ready()
+  await bot.wait_until_ready()
 @bot.command()
 async def pstart(ctx):
   if ctx.author.id == 809244553768861706 or ctx.author.id == 743042741461712897:
@@ -167,25 +176,17 @@ async def pstop(ctx):
   else:
     await ctx.send("You are not allowed to use this command!")
 
-@bot.command()
-async def ping(ctx):
-    before = time.monotonic()
-    message = await ctx.send("🏓 Pong!")
-    ping = (time.monotonic() - before) * 1000
-    await message.edit(content=f"🏓 Pong!  `{int(ping)}ms`")
-    print(f'Ping {int(ping)}ms')
-
-extensions = ['cogs.genshin', 
-              'cogs.miscellaneous', 
-              'cogs.mod', 
-              'cogs.reminder', 
-              'cogs.voice', 
-              'cogs.info', 
-              'cogs.fun'     
+extensions = [
+  'cogs.genshin', 
+  'cogs.miscellaneous', 
+  'cogs.mod', 
+  'cogs.reminder', 
+  'cogs.voice', 
+  'cogs.info', 
+  'cogs.fun'     
 ]
 
 if __name__ == '__main__':
   for ext in extensions:
     bot.load_extension(ext)
-keep_alive()
 bot.run(os.getenv('TOKEN'))
