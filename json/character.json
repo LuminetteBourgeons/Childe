@@ -6,8 +6,7 @@
     "weapon": "Bow",
     "constellation": "Monoceros Caeli",
     "img": "https://static.wikia.nocookie.net/gensin-impact/images/3/3a/Character_Tartaglia_Portrait.png",
-    "name2": "Hydro-Tartaglia",
-    "cons2": "```asciidoc\n= Foul Legacy: Tide Withholder =\nDecrease the CD of Foul Legacy: Raging Tide by 20%\n= Foul Legacy: Understream =\nWhen opponents affected by Riptide are defeated. Tartaglia regenerates 4 Elemental Energy.\n= Abyssal Mayhem: Vortex of Turmoil =\nIncreases the Level of Foul Legacy: Raging Tide by 3. Maximum upgrade level is 15.\n= Abyssal Mayhem: Hydrosprout =\nIf Tartaglia is in Foul Legacy: Raging Tide's Melee Stance, triggers Riptide Slash against opponents on the field affected by Riptide every 4s, otherwise, triggers Riptide Flash.\nRiptide Slashes and Riptide Flashes triggered by this Constellation effect are not subject to the time intervals that would typically apply to these two Riptide effects, nor do they have any effects on those time intervals.\n= Havoc: Formless Blade =\nIncreases the level of Havoc: Obliteration by 3. Maximum upgrade level is 15.\n= Havoc: Annihilation =\nWhen Havoc: Obliteration is cast in Melee stance, the CD of Foul Legacy: Raging Tide is reset. This effect will only take place once Tartaglia returns to his Ranged Stance.```"
+    
   },
   {
     "name": "Amber",
