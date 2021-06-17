@@ -158,12 +158,6 @@ async def specialist (ctx):
   await ctx.send("https://imgur.com/CDfXufV")
 
 @bot.command()
-async def aisha(ctx):
-  if ctx.author.id == 809244553768861706 or ctx.author.id == 743042741461712897:
-    await ctx.send ('sayang bimo')
-    #bucin
-
-@bot.command()
 async def say(ctx, *, msg):
   if ctx.author.id == 809244553768861706 or ctx.author.id == 743042741461712897:
     await ctx.message.delete()
