@@ -1,6 +1,8 @@
 import discord
 from discord.ext import commands, tasks
+import DiscordUtils
 '''from discord.ext.commands import CommandNotFound'''
+from keep_alive import keep_alive
 import os, asyncio
 from random import choice
 
@@ -13,7 +15,7 @@ presence= [
   discord.Activity(type=discord.ActivityType.competing, name=("ᴛʜᴇʀᴇ🥰ᴡᴀs🔥ᴀ🌝ᴄᴀᴛ🐈ᴛʜᴀᴛ🐸ʀᴇᴀʟʟʏ👑ᴡᴀs✨ɢᴏɴᴇᴇᴇ🌈")),
   discord.Activity(type=discord.ActivityType.watching, name=("Luminette ❤️")),
   discord.Activity(type=discord.ActivityType.watching, name=("Minet bucin sm Mayo >:(")),
-  discord.Activity(type=discord.ActivityType.watching, name=("[BUKAN] Primordial World")),
+  discord.Activity(type=discord.ActivityType.watching, name=("Primordial World")),
   discord.Activity(type=discord.ActivityType.watching, name=("TompelL Official")),
   discord.Activity(type=discord.ActivityType.listening, name=("Rasputin")),
   discord.Activity(type=discord.ActivityType.listening, name=("Tartagalicious~"))
@@ -40,7 +42,7 @@ bot.remove_command('help')
 
 @bot.command()
 async def help(ctx):
-  embed=discord.Embed(title="__*Childe's commands:*__", description="Prefix: `Ch! `, `ch! `, ✨new prefix: `+`✨\n⭐️ Use `+ about` for my informations!\n🧡 Develop by: `Luminette#9566`, `Luminette#0103`\n<:Chchibi:843379361138737182> With special helps from: `Rin#5535`\n<:PaimonHehe:843373207130079232> The next generation of __Paidoru__ (`Paimon#7192`) by `Nawaytes~#2470`\n‎ ‎ ", colour=discord.Color.orange())
+  embed=discord.Embed(title="__*Childe's commands:*__", description="Prefix: `Ch! `, `ch! `, ✨new prefix: `+`✨\n Use `+ about` for my informations!\n🧡 Develop by: `Luminette#9566`, `Luminette#0103`\n<:Chchibi:843379361138737182> With special helps from: `Rin#5535`, `Mayonese#0103`, `MankGarox#4104`\n<:PaimonHehe:843373207130079232> The next generation of __Paidoru__ (`Paimon#7192`) by `Nawaytes~#2470`\n‎ ‎ ", colour=discord.Color.orange())
   embed.set_thumbnail(url='https://static.wikia.nocookie.net/gensin-impact/images/5/53/Character_Tartaglia_Thumb.png/revision/latest/smart/width/250/height/250?cb=20210213163935')
   embed.add_field(name="<:Chchibi:843379361138737182> __Invite me to your server!__ <:Chchibi:843379361138737182>", value="[Click here](https://discord.com/api/oauth2/authorize?client_id=806793987876192268&permissions=8&redirect_uri=http%3A%2F%2F127.0.0.1&scope=bot)\n*as Administrator*\n\n***List of Commands:***", inline=False)
   embed.add_field(name='<:pai1:845141679102754836> __Genshin Impact:__', value="‎ ‎ ‎ ‎ ・*Artifact info:* shows you informations about artifacts\n‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ `+ artifact <art. name>` / `+ a <art. name>`\n‎ ‎ ‎ ‎ ・*Weapon info:* shows you informations about weapons\n‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ `+ weapon <weap. name>` / `+ w <weap. name>`\n‎ ‎ ‎ ‎ ・*Experience:* \n‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ Info. about what you need for character's & weapon's exp\n‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ `+ exp`", inline=False)
@@ -62,7 +64,12 @@ async def ownerhelp(ctx):
 
 @bot.command()
 async def about(ctx):
-  embed=discord.Embed(title="__*Childe's information:*__", description=f"I'm No. 11 of the Fatui Harbingers, codename **Childe**, but I also go by Tartaglia. And you... Hmm, you too like to cause quite the stir, don't you? Something tells me we're going to get along splendidly. :)\n\nI'm on version 2.5\nFor more information about my commands, use `+ help`\nI'm now serving `{len(ctx.bot.guilds)}` servers\n\n[Click here](https://github.com/LuminetteBourgeons/Childe) to see Luminette's github (don't forget the stars please 🧡🧡)\n[Click here](https://ko-fi.com/childe_bot) to treat me a coffee 🧡\n\n‎ ‎ \nPrefix: `Ch! `, `ch! `, ✨new prefix: `+`✨\n<:Chchibi:843379361138737182> Develop by: `Luminette#9566`, `Luminette#0103`\n<:Chchibi:843379361138737182> With special helps from: `Rin#5535`\n<:PaimonHehe:843373207130079232> The next generation of __Paidoru__ (`Paimon#7192`) by `Nawaytes~#2470`\n‎ ‎ ", colour=discord.Color.orange())
+  members_set = set()
+  for guild in ctx.bot.guilds:
+    for member in guild.members:
+      members_set.add(member)
+  members = len(members_set)
+  embed=discord.Embed(title="__*Childe's information:*__", description=f"I'm No. 11 of the Fatui Harbingers, codename **Childe**, but I also go by Tartaglia. And you... Hmm, you too like to cause quite the stir, don't you? Something tells me we're going to get along splendidly. :)\n\nI'm on version 2.5\nFor more information about my commands, use `+ help`\nI'm now serving `{len(ctx.bot.guilds)}` servers, and `{members}` members!\n\n[Click here](https://github.com/LuminetteBourgeons/Childe) to see Luminette's github (don't forget the stars please 🧡🧡)\n[Click here](https://ko-fi.com/childe_bot) to treat me a coffee 🧡\n\n‎ ‎ \nPrefix: `Ch! `, `ch! `, ✨new prefix: `+`✨\n<:Chchibi:843379361138737182> Develop by: `Luminette#9566`, `Luminette#0103`\n<:Chchibi:843379361138737182> With special helps from: `Rin#5535`\n<:PaimonHehe:843373207130079232> The next generation of __Paidoru__ (`Paimon#7192`) by `Nawaytes~#2470`\n‎ ‎ ", colour=discord.Color.orange())
   await ctx.send(embed=embed)
 
 @bot.command()
@@ -126,11 +133,6 @@ async def on_message(message):
     if message.author == bot.user:
       return
     await bot.process_commands(message)
-    if message.content.lower().startswith('hello'):
-      if message.channel.id == 775568951844405250:
-        return
-      await message.channel.send('Hi, {0.author.mention} !'.format(message))
-      await bot.process_commands(message)
     if message.content.lower().startswith('childe?'):
       await message.channel.send('Hey girlie, hold still')
       await bot.process_commands(message)
@@ -150,6 +152,10 @@ async def on_command_completion(ctx):
   channel = bot.get_channel(841906846389764146)
   embed = discord.Embed(title=f"<:Chchibi:843379361138737182> Completed {ctx.author.name}'s command!", description=f"{ctx.message.content}",colour=discord.Color.gold())
   await channel.send(embed=embed)
+
+@bot.command()
+async def specialist (ctx):
+  await ctx.send("https://imgur.com/CDfXufV")
 
 @bot.command()
 async def aisha(ctx):
@@ -224,6 +230,18 @@ async def rcstop(ctx):
   else:
     await ctx.send("You are not allowed to use this command!")
 
+@bot.command()
+async def paginate(ctx):
+    embed1 = discord.Embed(color=ctx.author.color).add_field(name="Example", value="Page 1")
+    embed2 = discord.Embed(color=ctx.author.color).add_field(name="Example", value="Page 2")
+    embed3 = discord.Embed(color=ctx.author.color).add_field(name="Example", value="Page 3")
+    paginator = DiscordUtils.Pagination.CustomEmbedPaginator(ctx, remove_reactions=True)
+    paginator.add_reaction('⏮️', "first")
+    paginator.add_reaction('⏪', "back")
+    paginator.add_reaction('⏩', "next")
+    paginator.add_reaction('⏭️', "last")
+    embeds = [embed1, embed2, embed3]
+    await paginator.run(embeds)
 
 extensions = [
   'cogs.genshin', 
@@ -232,10 +250,11 @@ extensions = [
   'cogs.reminder', 
   'cogs.voice', 
   'cogs.info', 
-  'cogs.fun'     
+  'cogs.fun',    
 ]
 
 if __name__ == '__main__':
   for ext in extensions:
     bot.load_extension(ext)
+keep_alive()
 bot.run(os.getenv('TOKEN'))
