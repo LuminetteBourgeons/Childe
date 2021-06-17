@@ -2,7 +2,6 @@ import discord
 from discord.ext import commands, tasks
 import DiscordUtils
 '''from discord.ext.commands import CommandNotFound'''
-from keep_alive import keep_alive
 import os, asyncio
 from random import choice
 
@@ -250,5 +249,4 @@ extensions = [
 if __name__ == '__main__':
   for ext in extensions:
     bot.load_extension(ext)
-keep_alive()
 bot.run(os.getenv('TOKEN'))
