@@ -26,8 +26,8 @@ presence= [
   discord.Activity(type=discord.ActivityType.watching, name=("TompelL Official")),
   discord.Activity(type=discord.ActivityType.watching, name=("Ruko R0ixy")),
   discord.Activity(type=discord.ActivityType.listening, name=("Rasputin")),
-  discord.Activity(type=discord.ActivityType.playing, name=("DM for Feedback!!")),
-  discord.Activity(type=discord.ActivityType.listening, name=("Tartagalicious~"))
+  discord.Activity(type=discord.ActivityType.listening, name=("Tartagalicious~")),
+  discord.Activity(type=discord.ActivityType.playing, name=("DM for Feedback!!"))
 ]
 
 colours = [
