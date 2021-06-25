@@ -9,6 +9,7 @@ from random import choice
 #commands       =841906846389764146
 #commands-error =854589548864340009
 #warn-log       =855287882965188628
+#dm-reports     =857821888230064178
 
 orange=discord.Color.orange()
 
@@ -25,6 +26,7 @@ presence= [
   discord.Activity(type=discord.ActivityType.watching, name=("TompelL Official")),
   discord.Activity(type=discord.ActivityType.watching, name=("Ruko R0ixy")),
   discord.Activity(type=discord.ActivityType.listening, name=("Rasputin")),
+  discord.Activity(type=discord.ActivityType.playing, name=("DM for Feedback!!")),
   discord.Activity(type=discord.ActivityType.listening, name=("Tartagalicious~"))
 ]
 
@@ -47,7 +49,6 @@ PREFIX = [
 
 intents = discord.Intents.all()
 intents.members = True
-intents.reactions = True
 
 bot = commands.Bot(command_prefix=PREFIX, case_insensitive=True, help_command=None, intents=intents)
 
@@ -55,7 +56,7 @@ bot.remove_command('help')
 
 @bot.command()
 async def help(ctx):
-  embed1=discord.Embed(title="__*Childe's commands:*__", description="Prefix: `Ch! `, `ch! `, ✨new prefix: `+`✨\n Use `+ about` for my informations!\n🧡 Develop by: <@743042741461712897> & <@809244553768861706>\n<:Chchibi:843379361138737182> With special helps from: <@421686337779793931>, <@236823518233362442>, & <@433919554004058112>\n<:PaimonHehe:843373207130079232> The next generation of __Paidoru__ (`Paimon#7192`) by <@533685396404568104>\n‎ ‎ ", color=orange)
+  embed1=discord.Embed(title="__*Childe's commands:*__", description="Prefix: `Ch! `, `ch! `, ✨new prefix: `+`✨\n Use `+ about` for my informations!\n🧡 Develop by: `Luminette#9466` & `Luminette#0103` \n<:Chchibi:843379361138737182> With special helps from: `Rin#5535`, `Mayonese#0103`, & `MankGarox#4104`\n<:PaimonHehe:843373207130079232> The next generation of __Paidoru__ (`Paimon#7192`) by `Nawaytes~#2470`\n‎ ‎ ", color=orange)
   embed1.set_thumbnail(url='https://static.wikia.nocookie.net/gensin-impact/images/5/53/Character_Tartaglia_Thumb.png/revision/latest/smart/width/250/height/250?cb=20210213163935')
   embed1.set_footer(text=f"Serving: {ctx.author.name}", icon_url=ctx.author.avatar_url)
   embed2=discord.Embed(title="<:Chchibi:843379361138737182> __Invite me to your server!__ <:Chchibi:843379361138737182>", description="[Click here](https://discord.com/api/oauth2/authorize?client_id=806793987876192268&permissions=8&redirect_uri=http%3A%2F%2F127.0.0.1&scope=bot)\n*as Administrator*\n\n", color=orange)
@@ -65,9 +66,9 @@ async def help(ctx):
   embed3.set_footer(text=f"Serving: {ctx.author.name}", icon_url=ctx.author.avatar_url)
   embed4=discord.Embed(title='<:pai2:845141694541332481> __Fun:__', description="‎ ‎ ‎ ‎ ・*Rolling a dice:*\n‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ `+ roll` / `+ dice`\n‎ ‎ ‎ ‎ ・*Flipping a coin:*\n‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ `+ flip` / `+ coin`\n‎ ‎ ‎ ‎ ・*Ask 8ball:*\n‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ `+ 8ball <question>` / `+ ball8 <question>`\n‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ > I will answer your yes/no question :)\n‎ ‎ ‎ ‎ ・*Rock, Paper, Scissors:*\n‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ `+ rps`\n‎ ‎ ‎ ‎ ・*Tic Tac Toe:*\n‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ `+ ttt`‎", color=orange)
   embed4.set_footer(text=f"Serving: {ctx.author.name}", icon_url=ctx.author.avatar_url)
-  embed5=discord.Embed(title='<:pai3:845141711373598741> __Informations:__', description="‎ ‎ ‎ ‎ ・*Userinfo:* shows you informations about a user\n‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ `+ userinfo @user` / `+ userinfo`\n‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ > @user is optional\n‎ ‎ ‎ ‎ ・*Avatar:* shows you informations about a user's avatar\n‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ `+ avatar @user` / `+ avatar`\n‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ > @user is optional\n‎ ‎ ‎ ‎ ・*Serverinfo:* shows you informations about the server\n‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ `+ serverinfo`\n‎ ‎ ‎ ‎ ・*Servericon:* shows you the server icon\n‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ `+ servericon`\n‎ ‎ ‎ ‎ ・*Permissions:* shows you the user's permissions in the server\n‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ `+ perms` / `+ permissions`", color=orange)
+  embed5=discord.Embed(title='<:pai3:845141711373598741> __Informations:__', description="‎ ‎ ‎ ‎ ・*Userinfo:* shows you informations about a user\n‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ `+ userinfo @user` / `+ userinfo`\n‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ > @user is optional\n‎ ‎ ‎ ‎ ・*Avatar:* shows you informations about a user's avatar\n‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ `+ avatar @user` / `+ avatar`\n‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ > @user is optional\n‎ ‎ ‎ ‎ ・*Serverinfo:* shows you informations about the server\n‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ `+ serverinfo`\n‎ ‎ ‎ ‎ ・*Servericon:* shows you the server icon\n‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ `+ servericon`\n‎ ‎ ‎ ‎ ・*Permissions:* shows you the user's permissions in the server\n‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ `+ perms` / `+ permissions`\n‎ ‎ ‎ ‎ ・*Botinfo:*\n‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ shows you informations about bot that verified on discord.bots.gg \n‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ `+ botinfo <@bot>`", color=orange)
   embed5.set_footer(text=f"Serving: {ctx.author.name}", icon_url=ctx.author.avatar_url)
-  embed6=discord.Embed(title=' 🎨 __Miscellaneous:__', description="‎ ‎ ‎ ‎ ・*Help:* shows you this message\n‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ `+ help`\n‎ ‎ ‎ ‎ ・*Calculate:* I'll count for you :3\n‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ `+ calc <operation>` / `+ calculate <operation>`\n‎ ‎ ‎ ‎ ・*Picking out some choice:* I'll choose for you :3\n‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ `+ choose <opt. 1>|<opt.2>|<opt.3>|<...>` /\n‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ `+ pick <opt. 1>|<opt.2>|<opt.3>|<...>`\n‎ ‎ ‎ ‎ ・*Making regional texts:* simply turn `this` to 🇹 🇭 🇮 🇸\n‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ `+ regional <text>`\n‎ ‎ ‎ ‎ ・*Reminder:* \n‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ `+ reminder <time> <text>`\n‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ Example:`+ reminder 50m Cookies are ready!`\n‎ ‎ ‎ ‎ ・*Ping:* \n‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ `+ ping`\n‎ ‎ ‎ ‎ ・*Bitcoin:* gives you the current price of bitcoin\n‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ `+ bitcoin`\n‎ ‎ ‎ ‎ ・*Poll:* creates a poll where members can vote.\n‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ `+ poll`", color=orange)
+  embed6=discord.Embed(title=' 🎨 __Miscellaneous:__', description="‎ ‎ ‎ ‎ ・*Help:* shows you this message\n‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ `+ help`\n‎ ‎ ‎ ‎ ・*Calculate:* I'll count for you :3\n‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ `+ calc <operation>` / `+ calculate <operation>`\n‎ ‎ ‎ ‎ ・*Picking out some choice:* I'll choose for you :3\n‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ `+ choose <opt. 1>|<opt.2>|<opt.3>|<...>` /\n‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ `+ pick <opt. 1>|<opt.2>|<opt.3>|<...>`\n‎ ‎ ‎ ‎ ・*Making regional texts:* simply turn `this` to 🇹 🇭 🇮 🇸\n‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ `+ regional <text>`\n‎ ‎ ‎ ‎ ・*Reminder:* \n‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ `+ reminder <time> <text>`\n‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ Example:`+ reminder 50m Cookies are ready!`\n‎ ‎ ‎ ‎ ・*Ping:* \n‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ `+ ping`\n‎ ‎ ‎ ‎ ・*Bitcoin:* gives you the current price of bitcoin\n‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ `+ bitcoin`\n‎ ‎ ‎ ‎ ・*Urban:* urban dictionary\n‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ `+ urban <text>`\n‎ ‎ ‎ ‎ ・*Poll:* creates a poll where members can vote.\n‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ `+ poll`", color=orange)
   embed6.set_footer(text=f"Serving: {ctx.author.name}", icon_url=ctx.author.avatar_url)
   embed7=discord.Embed(title='🔈 __Voice Activity:__', description="‎ ‎ ‎ ‎ ・*Connect to a voice channel:* \n‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ `+ join`\n‎ ‎ ‎ ‎ ・*Disconnect from a voice channel:*\n‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ `+ leave`\n‎ ‎ ‎ ‎ ", color=orange)
   embed7.set_footer(text=f"Serving: {ctx.author.name}", icon_url=ctx.author.avatar_url)
@@ -81,11 +82,15 @@ async def help(ctx):
   await paginator.run(embeds)
 
 @bot.command()
+async def modhelp(ctx):
+  pass
+
+@bot.command()
 async def ownerhelp(ctx):
   if ctx.author.id == 809244553768861706 or ctx.author.id == 743042741461712897:
     embed=discord.Embed(title="__Hello, Luminette 🧡__", description="My Prefix: `Ch! `, `ch! `, ✨new prefix: `+`✨", color=orange)
     embed.set_thumbnail(url='https://static.wikia.nocookie.net/gensin-impact/images/5/53/Character_Tartaglia_Thumb.png/revision/latest/smart/width/250/height/250?cb=20210213163935')
-    embed.add_field(name="__Your commands:__", value="Shows my active servers: `+servers`\nAuto presence changing: `+pstart` & `+pstop`\n", inline=False)
+    #on development
     await ctx.send(embed=embed)
 
 @bot.command()
@@ -95,7 +100,7 @@ async def about(ctx):
     for member in guild.members:
       members_set.add(member)
   members = len(members_set)
-  embed=discord.Embed(title="__*Childe's information:*__", description=f"I'm No. 11 of the Fatui Harbingers, codename **Childe**, but I also go by Tartaglia. And you... Hmm, you too like to cause quite the stir, don't you? Something tells me we're going to get along splendidly. :)\n\nI'm on version 2.5\nFor more information about my commands, use `+ help`\nI'm now serving `{len(ctx.bot.guilds)}` servers, and `{members}` members!\n\n[Click here](https://github.com/LuminetteBourgeons/Childe) to see Luminette's github (don't forget the stars please 🧡🧡)\n[Click here](https://ko-fi.com/childe_bot) to treat me a coffee 🧡\n\n‎ ‎ \nPrefix: `Ch! `, `ch! `, ✨new prefix: `+`✨\n<:Chchibi:843379361138737182> Develop by: `Luminette#9566`, `Luminette#0103`\n<:Chchibi:843379361138737182> With special helps from: `Rin#5535`\n<:PaimonHehe:843373207130079232> The next generation of __Paidoru__ (`Paimon#7192`) by `Nawaytes~#2470`\n‎ ‎ ", color=orange)
+  embed=discord.Embed(title="__*Childe's information:*__", description=f"I'm No. 11 of the Fatui Harbingers, codename **Childe**, but I also go by Tartaglia. And you... Hmm, you too like to cause quite the stir, don't you? Something tells me we're going to get along splendidly. :)\n\nI'm on version 2.5\nFor more information about my commands, use `+ help`\nI'm now serving `{len(ctx.bot.guilds)}` servers, and `{members}` members!\n\n[Click here](https://github.com/LuminetteBourgeons/Childe) to see Luminette's github (don't forget the stars please 🧡🧡)\n[Click here](https://ko-fi.com/childe_bot) to treat me a coffee 🧡\n\n‎ ‎ \nPrefix: `Ch! `, `ch! `, ✨new prefix: `+`✨\n<:Chchibi:843379361138737182> Develop by: Luminette\n‎ ‎ ", color=orange)
   await ctx.send(embed=embed)
 
 @bot.command()
@@ -155,10 +160,7 @@ async def on_command_error(ctx, error):
 
 @bot.event
 async def on_member_join(member):
-    if member.guild.id == 786492151058923520:
-      channel = bot.get_channel(845166313134882866)
-      await channel.send("Welcome, {} :heart:".format (member.mention))
-    elif member.guild.id == 271215379311886336:
+    if member.guild.id == 271215379311886336:
       channel = bot.get_channel(834013759516573707)
       await channel.send("Welcome, {} :heart:".format (member.mention))
     elif member.guild.id == 738709993238560899:
@@ -203,6 +205,16 @@ async def on_command_completion(ctx):
 @bot.command()
 async def specialist (ctx):
   await ctx.send("https://imgur.com/CDfXufV")
+
+@bot.command()
+async def clap (ctx):
+  await ctx.send("https://media.tenor.com/images/0ce17d9a7c11a18e00f6d34b11290116/tenor.gif")
+  
+@bot.command()
+async def aisha(ctx):
+  if ctx.author.id == 809244553768861706 or ctx.author.id == 743042741461712897:
+    await ctx.send ('sayang bimo')
+    #bucin
 
 @bot.command(aliases=['echo'])
 async def say(ctx, *, msg):
@@ -279,7 +291,9 @@ extensions = [
   'cogs.reminder', 
   'cogs.voice', 
   'cogs.info', 
-  'cogs.fun',    
+  'cogs.fun',
+  'cogs.modmail',
+  'cogs.owner'  
 ]
 
 if __name__ == '__main__':
