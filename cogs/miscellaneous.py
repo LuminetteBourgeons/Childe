@@ -1,5 +1,12 @@
+import discord
 from discord.ext import commands
 import random, time
+from .utils import chat_formatting
+from urllib.parse import quote_plus
+import aiohttp
+import json
+
+#dibawah ada ubah warna embed
 
 class Misc(commands.Cog):
   def __init__(self,bot):
@@ -42,7 +49,7 @@ class Misc(commands.Cog):
 
   @commands.command(aliases=['pick'])
   async def choose(self, ctx, *, choices: str):
-    await ctx.send('I choose: ``{}``'.format(random.choice(choices.split("|"))))
+    await ctx.send('I choose: {}'.format(random.choice(choices.split("|"))))
   
   @commands.command()
   async def regional(self,ctx, *, msg):
@@ -58,6 +65,59 @@ class Misc(commands.Cog):
     message = await ctx.send("🏓 Pong!")
     ping = (time.monotonic() - before) * 1000
     await message.edit(content=f"🏓 Pong!  `{int(ping)}ms`")
+
+  @commands.command()
+  async def poll(self, ctx, *, title):
+    embed = discord.Embed(title="A new poll has been created!", description=f"{title}", color=discord.Colour.orange())
+    embed.set_footer(text=f"Poll created by: {ctx.message.author} • React to vote!")
+    embed_message = await ctx.send(embed=embed)
+    await embed_message.add_reaction("👍")
+    await embed_message.add_reaction("👎")
+    await embed_message.add_reaction("🤷")
+
+  @commands.command(name="bitcoin")
+  async def bitcoin(self, ctx):
+    url = "https://api.coindesk.com/v1/bpi/currentprice/BTC.json"
+    async with aiohttp.ClientSession() as session:
+      raw_response = await session.get(url)
+      response = await raw_response.text()
+      response = json.loads(response)
+      embed = discord.Embed(title=":information_source: Info",description=f"Bitcoin price is: ${response['bpi']['USD']['rate']}", color=discord.Colour.orange())
+      await ctx.send(embed=embed)
+
+  @commands.command()
+  async def urban(self, ctx, *, search_terms: str, definition_number: int = 1):
+    def encode(s):
+      return quote_plus(s, encoding="utf-8", errors="replace")
+    search_terms = search_terms.split(" ")
+    try:
+      if len(search_terms) > 1:
+        pos = int(search_terms[-1]) - 1
+        search_terms = search_terms[:-1]
+      else:
+        pos = 0
+      if pos not in range(0, 11):
+        pos = 0
+    except ValueError:
+      pos = 0
+    search_terms = "+".join([encode(s) for s in search_terms])
+    url = "http://api.urbandictionary.com/v0/define?term=" + search_terms
+    try:
+      async with aiohttp.ClientSession() as cs:
+        async with cs.get(url) as r:
+          result = await r.json()
+      if result["list"]:
+        definition = result['list'][pos]['definition']
+        example = result['list'][pos]['example']
+        defs = len(result['list'])
+        msg = ("**Definition #{} out of {}:\n**{}\n**Example:\n**{}".format(pos + 1, defs, definition,example))
+        msg = chat_formatting.pagify(msg, ["\n"])
+        for page in msg:
+          await ctx.send(page)
+      else:
+        await ctx.send("Your search terms gave no results.")
+    except IndexError:
+      await ctx.send("There is no definition #{}".format(pos + 1))
 
 def setup(bot):
   bot.add_cog(Misc(bot))
