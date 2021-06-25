@@ -107,19 +107,19 @@ class Mod(commands.Cog):
     await ctx.send("DM sent!")
 
   @commands.command()
-  @commands.has_permissions(administrator=True)
-  async def warn(self, ctx, member: discord.member, *, reason="Not specified"):
-    if member is None:
-      embed = discord.Embed(color=orange, title=f'{ctx.author.name}',description='Please specify the user you want to warn\n Use:`+warn @user`')
-      await ctx.send(embed=embed)
-    embed1 = discord.Embed(color=orange, title=f'{member}, you have been warned!', description=f'by {ctx.author.name}')
-    embed1.add_field(name="Reason:", value=reason)
-    await ctx.send(embed=embed1)
-    channel = ctx.bot.get_channel(854589548864340009)
-    embed2 = discord.Embed(color=orange, title=f'{member}, have been warned!', description=f'by {ctx.author.name}')
-    embed2.add_field(name="Reason:", value=reason)
-    embed2.add_field(name="Server:", value=f'{ctx.guild.name}')
-    await channel.send('––––––––––––––––––––––––––––––––––––––––––––––––',embed=embed2)
+  @commands.has_permissions(manage_messages=True)
+  async def warn(self, ctx, member: discord.Member, *, reason="Not specified"):
+    embed = discord.Embed(title="User Warned!", description=f"**{member}** was warned by **{ctx.message.author}**!", color=orange)
+    embed.add_field(name="Reason:",value=reason)
+    await ctx.send(embed=embed)
+    try:
+      await member.send(f"You were warned by **{ctx.message.author}**!\nReason: {reason}")
+    except:
+      pass
+    channel = ctx.bot.get_channel(855312734874107925)
+    embed = discord.Embed(title=f"WARNED", description=f"{member}\nReason: {reason}\nBy:",colour=discord.Color.red())
+    embed.set_footer(text=f"{ctx.author.name}", icon_url=ctx.author.avatar_url)
+    await channel.send('––––––––––––––––––––––––––––––––––––––––––––––––',embed=embed)
   @commands.command()
   @commands.has_permissions(kick_members=True)
   async def kick(self, ctx, member: discord.Member, *, reason="Not specified"):
