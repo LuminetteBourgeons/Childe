@@ -209,12 +209,6 @@ async def specialist (ctx):
 @bot.command()
 async def clap (ctx):
   await ctx.send("https://media.tenor.com/images/0ce17d9a7c11a18e00f6d34b11290116/tenor.gif")
-  
-@bot.command()
-async def aisha(ctx):
-  if ctx.author.id == 809244553768861706 or ctx.author.id == 743042741461712897:
-    await ctx.send ('sayang bimo')
-    #bucin
 
 @bot.command(aliases=['echo'])
 async def say(ctx, *, msg):
