@@ -1,6 +1,6 @@
 import discord
 from discord.ext import commands
-import random, asyncio
+import random, asyncio, aiohttp
 
 orange=discord.Color.orange()
 
@@ -223,5 +223,20 @@ class Fun(commands.Cog):
       elif isinstance(error, commands.BadArgument):
           await ctx.send("Please make sure to enter an integer.")
 
+  @commands.command()
+  async def dadjoke(self, ctx):
+    api = "https://icanhazdadjoke.com/"
+    async with aiohttp.request("GET", api, headers={"Accept": "text/plain"}) as r:
+      result = await r.text(encoding="UTF-8")
+      await ctx.send(f"`{result}`")
+
+  @commands.command()
+  async def specialist(self, ctx):
+    await ctx.send("https://imgur.com/CDfXufV")
+
+  @commands.command()
+  async def clap(self, ctx):
+    await ctx.send("https://media.tenor.com/images/0ce17d9a7c11a18e00f6d34b11290116/tenor.gif")
+    
 def setup(bot):
   bot.add_cog(Fun(bot))
