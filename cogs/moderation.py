@@ -25,56 +25,6 @@ class Mod(commands.Cog):
       await ctx.send('JSON ERROR', delete_after=1)
       return
 
-  @commands.command()
-  @commands.has_permissions(administrator=True)
-  async def setonline(self, ctx):
-    await ctx.bot.change_presence(status=discord.Status.online)
-    embed = discord.Embed(color=orange, title="Set Childe's status to",description='`Online`')
-    await ctx.send(embed=embed)
-  @commands.command()
-  @commands.has_permissions(administrator=True)
-  async def setidle(self, ctx):
-    await ctx.bot.change_presence(status=discord.Status.idle)
-    embed = discord.Embed(color=orange, title="Set Childe's status to",description='`Idle`')
-    await ctx.send(embed=embed)
-  @commands.command()
-  @commands.has_permissions(administrator=True)
-  async def setdnd(self, ctx):
-    await ctx.bot.change_presence(status=discord.Status.dnd)
-    embed = discord.Embed(color=orange, title="Set Childe's status to",description='`Do not disturb`')
-    await ctx.send(embed=embed)
-  @commands.command()
-  @commands.has_permissions(administrator=True)
-  async def setinv(self, ctx):
-    await ctx.bot.change_presence(status=discord.Status.invisible)
-    embed = discord.Embed(color=orange, title="Set Childe's status to",description='`Invisible`')
-    await ctx.send(embed=embed)
-
-  @commands.command()
-  @commands.has_permissions(administrator=True)
-  async def actplaying(self, ctx, *, name):
-    await ctx.bot.change_presence(activity=discord.Activity(type=discord.ActivityType.playing, name=name))
-    embed = discord.Embed(color=orange,title="Set Childe's activity to",description=f'`playing {name}`')
-    await ctx.send(embed=embed)
-  @commands.command()
-  @commands.has_permissions(administrator=True)
-  async def actlistening(self, ctx, *, name):
-    await ctx.bot.change_presence(activity=discord.Activity(type=discord.ActivityType.listening, name=name))
-    embed = discord.Embed(color=orange, title="Set Childe's activity to",description=f'`listening {name}`')
-    await ctx.send(embed=embed)
-  @commands.command()
-  @commands.has_permissions(administrator=True)
-  async def actwatching(self, ctx, *, name):
-    await ctx.bot.change_presence(activity=discord.Activity(type=discord.ActivityType.watching, name=name))
-    embed = discord.Embed(color=orange,title="Set Childe's activity to",description=f'`watching {name}`')
-    await ctx.send(embed=embed)
-  @commands.command()
-  @commands.has_permissions(administrator=True)
-  async def actcompeting(self, ctx, *, name):
-    await ctx.bot.change_presence(activity=discord.Activity(type=discord.ActivityType.competing, name=name))
-    embed = discord.Embed(color=orange, title="Set Childe's activity to",description=f'`competing in {name}`')
-    await ctx.send(embed=embed)
-
   @commands.command(aliases=['purge'])
   @commands.has_permissions(manage_messages=True, manage_channels=True)
   async def delete(self, ctx, limit=500, member: discord.Member=None):
@@ -116,7 +66,7 @@ class Mod(commands.Cog):
       await member.send(f"You were warned by **{ctx.message.author}**!\nReason: {reason}")
     except:
       pass
-    channel = ctx.bot.get_channel(855312734874107925)
+    channel = ctx.bot.get_channel(855287882965188628)
     embed = discord.Embed(title=f"WARNED", description=f"{member}\nReason: {reason}\nBy:",colour=discord.Color.red())
     embed.set_footer(text=f"{ctx.author.name}", icon_url=ctx.author.avatar_url)
     await channel.send('––––––––––––––––––––––––––––––––––––––––––––––––',embed=embed)
