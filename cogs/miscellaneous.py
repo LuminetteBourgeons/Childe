@@ -5,6 +5,7 @@ from .utils import chat_formatting
 from urllib.parse import quote_plus
 import aiohttp
 import json
+import requests
 
 #dibawah ada ubah warna embed
 
@@ -75,7 +76,7 @@ class Misc(commands.Cog):
     await embed_message.add_reaction("👎")
     await embed_message.add_reaction("🤷")
 
-  @commands.command(name="bitcoin")
+  @commands.command()
   async def bitcoin(self, ctx):
     url = "https://api.coindesk.com/v1/bpi/currentprice/BTC.json"
     async with aiohttp.ClientSession() as session:
@@ -118,6 +119,57 @@ class Misc(commands.Cog):
         await ctx.send("Your search terms gave no results.")
     except IndexError:
       await ctx.send("There is no definition #{}".format(pos + 1))
+
+  @commands.command()
+  async def weather(self, ctx, *, city: str):
+    api_key = "d56ded016a1a4e4339037079e9f4794f"
+    base_url = "http://api.openweathermap.org/data/2.5/weather?"
+    city_name = city
+    complete_url = base_url + "appid=" + api_key + "&q=" + city_name
+    response = requests.get(complete_url)
+    x = response.json()
+    channel = ctx.message.channel
+    if x["cod"] != "404":
+      async with channel.typing():
+        y = x["main"]
+        current_temperature = y["temp"]
+        current_temperature_celsius = str(round(current_temperature - 273.15))
+        current_pressure = y["pressure"]
+        current_humidity = y["humidity"]
+        z = x["weather"]
+        weather_description = z[0]["description"]
+        embed = discord.Embed(title=f"Weather in {city_name}", color=discord.Color.orange(),timestamp=ctx.message.created_at)
+        embed.add_field(name="Descripition", value=f"**{weather_description}**", inline=False)
+        embed.add_field(name="Temperature(C)", value=f"**{current_temperature_celsius}°C**", inline=False)
+        embed.add_field(name="Humidity(%)", value=f"**{current_humidity}%**", inline=False)
+        embed.add_field(name="Atmospheric Pressure(hPa)", value=f"**{current_pressure}hPa**", inline=False)
+        embed.set_thumbnail(url="https://i.ibb.co/CMrsxdX/weather.png")
+        await channel.send(embed=embed)
+    else:
+        await channel.send("City not found.")
+
+  @commands.command()
+  async def covid(self, ctx, *, country: str):
+    url = f"https://coronavirus-19-api.herokuapp.com/countries/{country}"
+    stats = requests.get(url)
+    json_stats = stats.json()
+    country = json_stats["country"]
+    totalCases = json_stats["cases"]
+    todayCases = json_stats["todayCases"]
+    totalDeaths = json_stats["deaths"]
+    todayDeaths = json_stats["todayDeaths"]
+    recovered = json_stats["recovered"]
+    active = json_stats["active"]
+    critical = json_stats["critical"]
+    embed = discord.Embed(title=f"**COVID-19 Status Of {country}**!", description=".", color=discord.Color.orange(), timestamp=ctx.message.created_at)
+    embed.add_field(name="**Total Cases**", value=totalCases, inline=True)
+    embed.add_field(name="**Today Cases**", value=todayCases, inline=True)
+    embed.add_field(name="**Total Deaths**", value=totalDeaths, inline=True)
+    embed.add_field(name="**Today Deaths**", value=todayDeaths, inline=True)
+    embed.add_field(name="**Recovered**", value=recovered, inline=True)
+    embed.add_field(name="**Active**", value=active, inline=True)
+    embed.add_field(name="**Critical**", value=critical, inline=True)
+    await ctx.send(embed=embed)
 
 def setup(bot):
   bot.add_cog(Misc(bot))
