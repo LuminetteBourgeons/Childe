@@ -1,6 +1,5 @@
-from discord.ext import commands
 import discord
-from random import choice 
+from discord.ext import commands
 
 class Reactions(commands.Cog):
   def __init__(self,bot):
@@ -43,7 +42,7 @@ class Reactions(commands.Cog):
   async def wasted(self, ctx, user: discord.Member = None):
     pass
   
-  #2 ppl required:
+  #2 ppl required:  
   @commands.command()
   async def bang(self, ctx, user: discord.Member = None):
     pass
@@ -113,4 +112,4 @@ class Reactions(commands.Cog):
     pass
 
 def setup(bot):
-    bot.add_cog(Reactions(bot))
+  bot.add_cog(Reactions(bot))
