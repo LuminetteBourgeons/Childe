@@ -1,6 +1,5 @@
 import discord
 from discord.ext import commands
-from keep_alive import keep_alive
 import os, asyncio
 
 #status         =841614719562285086
@@ -68,5 +67,4 @@ extensions = [
 if __name__ == '__main__':
   for ext in extensions:
     bot.load_extension(ext)
-keep_alive()
 bot.run(os.getenv('TOKEN'))
