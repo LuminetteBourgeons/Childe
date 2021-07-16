@@ -1,1464 +1,434 @@
 [
-
-
-
-  {
-    "name": "-",
-    "type": "Sword"
-  },
-  {
-    "name": "Dull Blade",
-    "type": "Sword",
-    "rarity": 1,
-    "atk": 23,
-    "secondary": "-",
-    "passive": "-",
-    "bonus": "-",
-    "location": "Chests",
-    "img": "https://static.wikia.nocookie.net/gensin-impact/images/2/2f/Weapon_Dull_Blade.png/revision/latest/scale-to-width-down/256?cb=20201119235841"
-  },
-  {
-    "name": "Silver Sword",
-    "type": "Sword",
-    "rarity": 2,
-    "atk": 33,
-    "secondary": "-",
-    "passive": "-",
-    "bonus": "-",
-    "location": "Chests",
-    "img": "https://static.wikia.nocookie.net/gensin-impact/images/3/32/Weapon_Silver_Sword.png/revision/latest/scale-to-width-down/256?cb=20201116035150"
-  },
-  {
-    "name": "Cool Steel",
-    "type": "Sword",
-    "rarity": 3,
-    "atk": 39,
-    "secondary": "ATK%",
-    "passive": "Bane of Water and Ice",
-    "bonus": "Increases DMG against enemies affected by Hydro or Cryo by 12/15/18/21/24%.",
-    "location": "Gacha",
-    "img": "https://static.wikia.nocookie.net/gensin-impact/images/9/9c/Weapon_Cool_Steel.png/revision/latest/scale-to-width-down/256?cb=20201119233444"
-  },
-  {
-    "name": "Dark Iron Sword",
-    "type": "Sword",
-    "rarity": 3,
-    "atk": 40,
-    "secondary": "Elemental Mastery",
-    "passive": "Overloaded",
-    "bonus": "Upon causing an Overloaded, Superconduct, Electro-Charged, or an Electro-infused Swirl reaction, increases Base ATK by 20/25/30/35/40% for 12s.",
-    "location": "Talk to Chen the Sharp near the Liyue Harbor ",
-    "img": "https://static.wikia.nocookie.net/gensin-impact/images/3/3a/Weapon_Dark_Iron_Sword.png/revision/latest/scale-to-width-down/256?cb=20201119235556"
-  },
-  {
-    "name": "Fillet Blade",
-    "type": "Sword",
-    "rarity": 3,
-    "atk": 39,
-    "secondary": "ATK%",
-    "passive": "Gash",
-    "bonus": "On hit, has 50% chance to deal 240/280/320/360/400% ATK DMG to a single enemy. Can only occur once every 15/14/13/12/11s.",
-    "location": "Chests",
-    "img": "https://static.wikia.nocookie.net/gensin-impact/images/f/f7/Weapon_Fillet_Blade.png/revision/latest/scale-to-width-down/256?cb=20201116033941"
-  },
-  {
-    "name": "Harbinger of Dawn",
-    "type": "Sword",
-    "rarity": 3,
-    "atk": 39,
-    "secondary": "CRIT DMG",
-    "passive": "Vigorous",
-    "bonus": "When HP is above 90%, increases CRIT Rate by 14/18/22/24/28%.",
-    "location": "Gacha",
-    "img": "https://static.wikia.nocookie.net/gensin-impact/images/2/23/Weapon_Harbinger_of_Dawn.png/revision/latest/scale-to-width-down/256?cb=20201119233056"
-  },
-  {
-    "name": "Skyrider Sword",
-    "type": "Sword",
-    "rarity": 3,
-    "atk": 38,
-    "secondary": "Energy Recharge",
-    "passive": "Determination",
-    "bonus": "Using an Elemental Burst grants a 12/15/18/21/24% increase in ATK and Movement SPD for 12s.",
-    "location": "Gacha",
-    "img": "https://static.wikia.nocookie.net/gensin-impact/images/3/34/Weapon_Skyrider_Sword.png/revision/latest/scale-to-width-down/256?cb=20201116035206"
-  },
-  {
-    "name": "Traveler's Handy Sword",
-    "type": "Sword",
-    "rarity": 3,
-    "atk": 40,
-    "secondary": "DEF",
-    "passive": "Journey",
-    "bonus": "Each Elemental Orb or Particle collected restores 1/1.25/1.5/1.75/2% HP.",
-    "location": "Chest",
-    "img": "https://static.wikia.nocookie.net/gensin-impact/images/c/c9/Weapon_Traveler%27s_Handy_Sword.png/revision/latest/scale-to-width-down/256?cb=20201116035456"
-  },
-  {
-    "name": "Blackcliff Longsword",
-    "type": "Sword",
-    "rarity": 4,
-    "atk": 44,
-    "secondary": "CRIT DMG",
-    "passive": "Press the Advantage",
-    "bonus": "After defeating an enemy, ATK is increased by 12/15/18/21/24% for 30s. This effect has a maximum of 3 stacks, and the duration of each stack is independent of the others.",
-    "location": "Starglitter Exchange",
-    "img": "https://static.wikia.nocookie.net/gensin-impact/images/6/6f/Weapon_Blackcliff_Longsword.png/revision/latest/scale-to-width-down/256?cb=20201116033216"
-  },
-  {
-    "name": "Favonius Sword",
-    "type": "Sword",
-    "rarity": 4,
-    "atk": 41,
-    "secondary": "Energy Recharge",
-    "passive": "Windfall",
-    "bonus": "CRIT hits have a 60/70/80/90/100% chance to generate 1 Elemental Orb, which will regenerate 6 Energy for the character. Can only occur once every 12/10.5/9/7.5/6s.",
-    "location": "Gacha",
-    "img": "https://static.wikia.nocookie.net/gensin-impact/images/9/90/Weapon_Favonius_Sword.png/revision/latest/scale-to-width-down/256?cb=20201116033811"
-  },
-  {
-    "name": "Iron Sting",
-    "type": "Sword",
-    "rarity": 4,
-    "atk": 42,
-    "secondary": "Elemental Mastery",
-    "passive": "Infusion Stinger",
-    "bonus": "Dealing Elemental DMG increases all DMG by 6% for 6s. Max 2 stacks. Can only occur once every 1s.",
-    "location": "Crafting",
-    "img": "https://static.wikia.nocookie.net/gensin-impact/images/3/35/Weapon_Iron_Sting.png/revision/latest/scale-to-width-down/256?cb=20201116034058"
-  },
-  {
-    "name": "Lion's Roar",
-    "type": "Sword",
-    "rarity": 4,
-    "atk": 42,
-    "secondary": "ATK%",
-    "passive": "Bane of Fire and Thunder",
-    "bonus": "Increases DMG against enemies affected by Pyro or Electro by 20/24/28/32/36%.",
-    "location": "Gacha",
-    "img": "https://static.wikia.nocookie.net/gensin-impact/images/e/e6/Weapon_Lion%27s_Roar.png/revision/latest/scale-to-width-down/256?cb=20201119232745"
-  },
-  {
-    "name": "Prototype Rancour",
-    "type": "Sword",
-    "rarity": 4,
-    "atk": 44,
-    "secondary": "Physical DMG Bonus",
-    "passive": "Smashed Stone",
-    "bonus": "On hit, Normal or Charged Attacks increase Base ATK and DEF by 4/4.5/5/5.5/6% for 6s. Max 4 stacks. Can only occur once every 0.3s.",
-    "location": "Crafting",
-    "img": "https://static.wikia.nocookie.net/gensin-impact/images/e/ef/Weapon_Prototype_Rancour.png/revision/latest/scale-to-width-down/256?cb=20201116034823"
-  },
-  {
-    "name": "Royal Longsword",
-    "type": "Sword",
-    "rarity": 4,
-    "atk": 42,
-    "secondary": "ATK%",
-    "passive": "Focus",
-    "bonus": "Upon damaging an enemy, increases CRIT Rate by 8%. Max 5 stacks. A CRIT hit removes all stacks.",
-    "location": "Starglitter Exchange",
-    "img": "https://static.wikia.nocookie.net/gensin-impact/images/c/cd/Weapon_Royal_Longsword.png/revision/latest/scale-to-width-down/256?cb=20201116034952"
-  },
-  {
-    "name": "Sacrificial Sword",
-    "type": "Sword",
-    "rarity": 4,
-    "atk": 41,
-    "secondary": "Energy Recharge",
-    "passive": "Composed",
-    "bonus": "After damaging an opponent with an Elemental Skill, the skill has a 40/50/60/70/80% chance to end its own CD. Can only occur once every 30/26/22/18/14s.",
-    "location": "Gacha",
-    "img": "https://static.wikia.nocookie.net/gensin-impact/images/a/a0/Weapon_Sacrificial_Sword.png/revision/latest/scale-to-width-down/256?cb=20201120010840"
-  },
-  {
-    "name": "The Alley Flash",
-    "type": "Sword",
-    "rarity": 4,
-    "atk": 44,
-    "secondary": "CRIT Rate",
-    "passive": "Itinerant Hero",
-    "bonus": "Continuosly sprinting for at least 1s increases ATK by 28% for 6s. This effect cannot stack.",
-    "location": "Gacha",
-    "img": "https://static.wikia.nocookie.net/gensin-impact/images/8/83/Weapon_The_Alley_Flash.png/revision/latest/scale-to-width-down/256?cb=20210317151138"
-  },
-  {
-    "name": "The Black Sword",
-    "type": "Sword",
-    "rarity": 4,
-    "atk": 42,
-    "secondary": "CRIT Rate",
-    "passive": "Justice",
-    "bonus": "Increases DMG dealt by Normal and Charged Attacks by 20%.\nAdditionally, regenerates 60% of ATK as HP when Normal and Charged Attacks score a CRIT Hit. This effect can occur once every 5s.",
-    "location": "BP Bounty",
-    "img": "https://static.wikia.nocookie.net/gensin-impact/images/c/cf/Weapon_The_Black_Sword.png/revision/latest/scale-to-width-down/256?cb=20201116035352"
-  },
-  {
-    "name": "The Flute",
-    "type": "Sword",
-    "rarity": 4,
-    "atk": 42,
-    "secondary": "ATK%",
-    "passive": "Chord",
-    "bonus": "Normal or Charged Attacks grant Harmonic on hits. Gaining 5 Harmonics triggers the power of music and deals 100/125/150/175/200% ATK DMG to surrounding enemies. Harmonics last up to 30s, and a maximum of 1 can be gained every 0.5s.",
-    "location": "Gacha",
-    "img": "https://static.wikia.nocookie.net/gensin-impact/images/6/63/Weapon_The_Flute.png/revision/latest/scale-to-width-down/256?cb=20201119203316"
-  },
-  {
-    "name": "Sword of Descension",
-    "type": "Sword",
-    "rarity": 4,
-    "atk": 39,
-    "secondary": "ATK%",
-    "passive": "Descension",
-    "bonus": "Hitting opponents with Normal and Charged Attacks grants a 50% chance to deal 200% ATK as DMG in a small AoE. This effect can only occur once every 10s. Additionally, if the Traveler equips the Sword of Descension, their ATK is increased by 66.",
-    "location": "Playstation Exclusive Event",
-    "img": "https://static.wikia.nocookie.net/gensin-impact/images/1/17/Weapon_Sword_of_Descension.png/revision/latest/scale-to-width-down/256?cb=20201116035338"
-  },
-  {
-    "name": "Festering Desire",
-    "type": "Sword",
-    "rarity": 4,
-    "atk": 42,
-    "secondary": "Energy Recharge",
-    "passive": "Undying Admiration",
-    "bonus": "Incrases Elemental Skill DMG by 16% and Elemental Skill CRIT Rata be 6%.",
-    "location": "Craft",
-    "img": "https://genshin.honeyhunterworld.com/img/weapon/festering_fang.png"
-  },
-  {
-    "name": "Aquila Favonia",
-    "type": "Sword",
-    "rarity": 5,
-    "atk": 48,
-    "secondary": "Physical DMG Bonus",
-    "passive": "Falcon's Defiance",
-    "bonus": "ATK is increased by 20/25/30/35/40%. Triggers on taking DMG: the soul of the Falcon of the West awakens, holding the banner of the resistance aloft, regenerating HP equal to 100/115/130/145/160% of ATK and dealing 200/230/260/290/320% of ATK as DMG to surrounding enemies. This effect can only occur once every 15s.",
-    "location": "Gacha",
-    "img": "https://static.wikia.nocookie.net/gensin-impact/images/6/6a/Weapon_Aquila_Favonia.png/revision/latest/scale-to-width-down/256?cb=20201120002750"
-  },
-  {
-    "name": "Skyward Blade",
-    "type": "Sword",
-    "rarity": 5,
-    "atk": 44,
-    "secondary": "Energy Recharge",
-    "passive": "Sky-Piercing Fang",
-    "bonus": "CRIT Rate increased by 4%. Gains Skypiercing Might upon using an Elemental Burst:\nIncreases Movement SPD by 10%, increases ATK SPD by 10%, and increases the DMG of Normal and Charged Attack hits by 20% for 12s.",
-    "location": "Gacha",
-    "img": "https://static.wikia.nocookie.net/gensin-impact/images/0/03/Weapon_Skyward_Blade.png/revision/latest/scale-to-width-down/256?cb=20201116035239"
-  },
-  {
-    "name": "Summit Shaper",
-    "type": "Sword",
-    "rarity": 5,
-    "atk": 46,
-    "secondary": "ATK%",
-    "passive": "Golden Majesty",
-    "bonus": "Increases Shield Strength by 20%. Scoring hits on opponents increases ATK by 4% for 8s. Max 5 stacks. Can only occur once every 0.3s. While protected by a shield, this ATK increase effect is increased by 100%. \n",
-    "location": "Gacha",
-    "img": "https://static.wikia.nocookie.net/gensin-impact/images/c/ca/Weapon_Summit_Shaper.png/revision/latest/scale-to-width-down/256?cb=20201223042936"
-  },
-  {
-    "name": "Primordial Jade Cutter",
-    "type": "Sword",
-    "rarity": 5,
-    "atk": 44,
-    "secondary": "CRIT Rate%",
-    "passive": "Protector's Virtue",
-    "bonus": "HP increased by 20%/25%/30%/35%/40%. Additionally, provides an ATK Bonus based on 1.2%/1.5%/1.8%/2.1%/2.4% of the wielder's Max HP.",
-    "location": "Gacha",
-    "img": "https://static.wikia.nocookie.net/gensin-impact/images/2/2a/Weapon_Primordial_Jade_Cutter.png/revision/latest/scale-to-width-down/256?cb=20210319202419"
-  },
-  {
-    "name": "Leak",
-    "type": "Sword"
-  },
-  {
-    "name": "Freedom-Sworn **(unreleased)**",
-    "type": "Sword",
-    "rarity": 5,
-    "atk": 46,
-    "secondary": "Elemental Mastery",
-    "passive": "Revolutionary Chorale",
-    "bonus": "A part of the 'Millennial Movement' that wanders amidst the winds. Increases DMG by 10%. When the character wielding this weapon triggers Elemental Reactions, they gain a Sigil of Rebellion. This effect can be triggered once every 0.5s and can be triggered even if said character is not on the field. When you possess 2 Sigils of Rebellion, all of them will be consumed and all nearby party members will obtain 'Millennial Movement: Song of Resistance' for 12s. 'Millennial Movement: Song of Resistance' increases Normal, Charged and Plunging Attack DMG by 16% and increases ATK by 20%. Once this effect is triggered, you will not gain Sigils of Rebellion for 20s. Of the many effects of the 'Millennial Movement', buffs of the same type will not stack.",
-    "location": "TBA",
-    "img": "https://genshin.honeyhunterworld.com/img/weapon/w_1405.png"
-  },
-  {
-    "name": "Amenoma Kageuta Blade **(unreleased)**",
-    "type": "Sword",
-    "rarity": 4,
-    "atk": 41,
-    "secondary": "ATK%",
-    "passive": "Iwakura Succession",
-    "bonus": "After casting an Elemental Skill, gain 1 Succession Seed. This effect can be triggered once every 5s. The Succession Seed lasts for 30s. Up to 3 Succession Seeds may exist simultaneously. After using an Elemental Burst, all Succession Seeds are consumed and after 2s, the character regenerates 6 Energy for each seed consumed.",
-    "location": "TBA",
-    "img": "https://genshin.honeyhunterworld.com/img/weapon/w_1313.png"
-  },
-  {
-    "name": "Mistsplitter's Reflection **(unreleased)**",
-    "type": "Sword",
-    "rarity": 5,
-    "atk": 48,
-    "secondary": "CRIT DMG",
-    "passive": "Mistsplitter's Sheath",
-    "bonus": "Gain a 12% Elemental DMG Bonus for every element and receive the might of Mistsplitter's Seal. At stack levels 1/2/3, Mistsplitter's Seal provides a 8/16/28% Elemental DMG Bonus for the character's Elemental Type. The character will obtain 1 stack of Mistsplitter's Seal in each of the following scenarios: Normal Attack deals Elemental DMG (stack lasts 5s), casting Elemental Burst (stacks lasts 10s); Energy is less than 100% (stack disappears when Energy is full). Each stack's duration is calculated independently.",
-    "location": "TBA",
-    "img": "https://genshin.honeyhunterworld.com/img/weapon/w_1407.png"
-  },
-
-
-
-  {
-    "name": "-",
-    "type": "Claymore"
-  },
-  {
-    "name": "Waster Greatsword",
-    "type": "Claymore",
-    "rarity": 1,
-    "atk": 23,
-    "secondary": "-",
-    "passive": "-",
-    "bonus": "-",
-    "location": "Chest",
-    "img": "https://static.wikia.nocookie.net/gensin-impact/images/4/4c/Weapon_Waster_Greatsword.png/revision/latest/scale-to-width-down/256?cb=20201120001015"
-  },
-  {
-    "name": "Old Merc's Pal",
-    "type": "Claymore",
-    "rarity": 2,
-    "atk": 33,
-    "secondary": "-",
-    "passive": "-",
-    "bonus": "-",
-    "location": "Chest",
-    "img": "https://static.wikia.nocookie.net/gensin-impact/images/0/0b/Weapon_Old_Merc%27s_Pal.png/revision/latest/scale-to-width-down/256?cb=20201116034249"
-  },
-  {
-    "name": "Bloodtainted Greatsword",
-    "type": "Claymore",
-    "rarity": 3,
-    "atk": 38,
-    "secondary": "Elemental Mastery",
-    "passive": "Bane of Fire and Thunder",
-    "bonus": "Increases DMG against enemies affected by Pyro or Electro by 12/15/18/21/24%.",
-    "location": "Gacha",
-    "img": "https://static.wikia.nocookie.net/gensin-impact/images/4/4a/Weapon_Bloodtainted_Greatsword.png/revision/latest/scale-to-width-down/256?cb=20201119233531"
-  },
-  {
-    "name": "Debate Club",
-    "type": "Claymore",
-    "rarity": 3,
-    "atk": 39,
-    "secondary": "ATK",
-    "passive": "Blunt Conclusion",
-    "bonus": "After using an Elemental Skill, Normal or Charged Attacks, on hit, deal an additional 60/75/90/105/120% ATK DMG in a small area. Effect lasts 15s. DMG can only occur once every 3s.",
-    "location": "Gacha",
-    "img": "https://static.wikia.nocookie.net/gensin-impact/images/7/74/Weapon_Debate_Club.png/revision/latest/scale-to-width-down/256?cb=20201116033616"
-  },
-  {
-    "name": "Ferrous Shadow",
-    "type": "Claymore",
-    "rarity": 3,
-    "atk": 39,
-    "secondary": "HP",
-    "passive": "Unbending",
-    "bonus": "When HP falls below 70/75/80/85/90%, increases Charged Attack DMG by 30/35/40/45/50%, and Charged Attacks become much harder to interrupt.",
-    "location": "Gacha",
-    "img": "https://static.wikia.nocookie.net/gensin-impact/images/e/e9/Weapon_Ferrous_Shadow.png/revision/latest/scale-to-width-down/256?cb=20201120003242"
-  },
-  {
-    "name": "Skyrider Greatsword",
-    "type": "Claymore",
-    "rarity": 3,
-    "atk": 39,
-    "secondary": "Physical DMG Bonus",
-    "passive": "Courage",
-    "bonus": "On hit, Normal or Charged Attacks increase ATK by 6/7/8/9/10% for 6s. Max 4 stacks. Can only occur once every 0.5s.",
-    "location": "Gacha",
-    "img": "https://static.wikia.nocookie.net/gensin-impact/images/6/6e/Weapon_Skyrider_Greatsword.png/revision/latest/scale-to-width-down/256?cb=20201116035158"
-  },
-  {
-    "name": "White Iron Greatsword",
-    "type": "Claymore",
-    "rarity": 3,
-    "atk": 39,
-    "secondary": "DEF",
-    "passive": "Cull the Weak",
-    "bonus": "Defeating an opponent restores 8/10/12/14/16% HP.",
-    "location": "Gacha",
-    "img": "https://static.wikia.nocookie.net/gensin-impact/images/5/56/Weapon_White_Iron_Greatsword.png/revision/latest/scale-to-width-down/256?cb=20201119201015"
-  },
-  {
-    "name": "Blackcliff Slasher",
-    "type": "Claymore",
-    "rarity": 4,
-    "atk": 42,
-    "secondary": "CRIT DMG",
-    "passive": "Press the Advantage",
-    "bonus": "After defeating an enemy, ATK is increased by 12/15/18/21/24% for 30s. This effect has a maximum of 3 stacks, and the duration of each stack is independent of the others.",
-    "location": "Starglitter Exchange",
-    "img": "https://static.wikia.nocookie.net/gensin-impact/images/d/d7/Weapon_Blackcliff_Slasher.png/revision/latest/scale-to-width-down/256?cb=20201116033252"
-  },
-  {
-    "name": "Favonius Greatsword",
-    "type": "Claymore",
-    "rarity": 4,
-    "atk": 41,
-    "secondary": "Energy Recharge",
-    "passive": "Windfall",
-    "bonus": "CRIT hits have a 60/70/80/90/100% chance to generate 1 Elemental Orb, which will regenerate 6 Energy for the character. Can only occur once every 12/10.5/9/7.5/6s.",
-    "location": "Gacha",
-    "img": "https://static.wikia.nocookie.net/gensin-impact/images/9/9c/Weapon_Favonius_Greatsword.png/revision/latest/scale-to-width-down/256?cb=20201119235934"
-  },
-  {
-    "name": "Lithic Blade",
-    "type": "Claymore",
-    "rarity": 4,
-    "atk": 41,
-    "secondary": "CRIT DMG",
-    "passive": "Lithic Axiom - Unity",
-    "bonus": "For every character in the party who hails from Liyue, the character who equips this weapon gains 6/7/8/9/10% ATK increase and 2/3/4/5/6% CRIT Rate increase.",
-    "location": "Gacha",
-    "img": "https://static.wikia.nocookie.net/gensin-impact/images/3/3a/Weapon_Lithic_Blade.png/revision/latest/scale-to-width-down/256?cb=20210225201003"
-  },
-  {
-    "name": "Prototype Archaic",
-    "type": "Claymore",
-    "rarity": 4,
-    "atk": 44,
-    "secondary": "ATK",
-    "passive": "Crush",
-    "bonus": "On hit, Normal or Charged Attacks have a 50% chance to deal an additional 240/300/360/420/480% ATK DMG to enemies within a small radius. Can only occur once every 15s.",
-    "location": "Crafting",
-    "img": "https://static.wikia.nocookie.net/gensin-impact/images/a/ab/Weapon_Prototype_Archaic.png/revision/latest/scale-to-width-down/256?cb=20201116034721"
-  },
-  {
-    "name": "Rainslasher",
-    "type": "Claymore",
-    "rarity": 4,
-    "atk": 42,
-    "secondary": "Elemental Mastery",
-    "passive": "Bane of Storm and Tide",
-    "bonus": "Increases DMG against enemies affected by Hydro or Electro by 20/25/30/35/40%.",
-    "location": "Gacha",
-    "img": "https://static.wikia.nocookie.net/gensin-impact/images/d/d4/Weapon_Rainslasher.png/revision/latest/scale-to-width-down/256?cb=20201119235128"
-  },
-  {
-    "name": "Royal Greatsword",
-    "type": "Claymore",
-    "rarity": 4,
-    "atk": 43,
-    "secondary": "ATK",
-    "passive": "Focus",
-    "bonus": "Upon damaging an enemy, increases CRIT Rate by 8%. Max 5 stacks. A CRIT hit removes all stacks.",
-    "location": "Starglitter Exchange",
-    "img": "https://static.wikia.nocookie.net/gensin-impact/images/b/bf/Weapon_Royal_Greatsword.png/revision/latest/scale-to-width-down/256?cb=20201116034928"
-  },
-  {
-    "name": "Serpent Spine",
-    "type": "Claymore",
-    "rarity": 4,
-    "atk": 42,
-    "secondary": "CRIT Rate",
-    "passive": "Wavesplitter",
-    "bonus": "Every 4s a character is on the field, they will deal 6% more DMG and take 3% more DMG. This effect has a maximum of 5 stacks and will not be reset if the character leaves the field, but will be cleared when the character takes DMG.",
-    "location": "BP Bounty",
-    "img": "https://static.wikia.nocookie.net/gensin-impact/images/8/88/Weapon_Serpent_Spine.png/revision/latest/scale-to-width-down/256?cb=20201116035126"
-  },
-  {
-    "name": "The Bell",
-    "type": "Claymore",
-    "rarity": 4,
-    "atk": 42,
-    "secondary": "HP",
-    "passive": "Rebellious Guardian",
-    "bonus": "Taking DMG generates a shield which absorbs DMG up to 20/23/26/29/32% of Max HP. This shield lasts for 10s or until broken, and can only be triggered once every 45s. While protected by the shield, the character gains 12/15/18/21/24% increased DMG.",
-    "location": "Gacha",
-    "img": "https://static.wikia.nocookie.net/gensin-impact/images/6/6e/Weapon_The_Bell.png/revision/latest/scale-to-width-down/256?cb=20201116035344"
-  },
-  {
-    "name": "Whiteblind",
-    "type": "Claymore",
-    "rarity": 4,
-    "atk": 42,
-    "secondary": "DEF",
-    "passive": "Infusion Blade",
-    "bonus": "On hit, Normal or Charged Attacks increase Base ATK and DEF by 6/7.5/9/10.5/12% for 6s. Max 4 stacks. Can only occur once every 0.5s.",
-    "location": "Crafting",
-    "img": "https://static.wikia.nocookie.net/gensin-impact/images/0/04/Weapon_Whiteblind.png/revision/latest/scale-to-width-down/256?cb=20201116035607"
-  },
-  {
-    "name": "Sacrificial Greatsword",
-    "type": "Claymore",
-    "rarity": 4,
-    "atk": 44,
-    "secondary": "Energy Recharge",
-    "passive": "Composed",
-    "bonus": "After damaging an opponent with an Elemental Skill, the skill has a 40/50/60/70/80% chance to end its own CD. Can only occur once every 30/26/22/18/14s.",
-    "location": "Gacha",
-    "img": "https://static.wikia.nocookie.net/gensin-impact/images/1/17/Weapon_Sacrificial_Greatsword.png/revision/latest/scale-to-width-down/256?cb=20201120004023"
-  },
-  {
-    "name": "Snow-Tombed Starsilver",
-    "type": "Claymore",
-    "rarity": 4,
-    "atk": 44,
-    "secondary": "Physical DMG Bonus",
-    "passive": "Frost Burial",
-    "bonus": "Hitting an opponent with Normal and Charged Attacks has a 60% chance of forming and dropping an Everfrost Icicle above them, dealing 80% AoE ATK DMG. Opponents affected by Cryo are dealt 200% ATK DMG. Can only occur once every 10s. ",
-    "location": "Craft",
-    "img": "https://static.wikia.nocookie.net/gensin-impact/images/4/49/Weapon_Snow-Tombed_Starsilver.png/revision/latest/scale-to-width-down/256?cb=20201223042944"
-  },
-  {
-    "name": "Skyward Pride",
-    "type": "Claymore",
-    "rarity": 5,
-    "atk": 45,
-    "secondary": "Energy Recharge",
-    "passive": "Sky-Ripping Dragon Spine",
-    "bonus": "Increases all DMG by 8/10/12/14/16%. After using an Elemental Burst, Normal or Charged Attack, on hit, creates a vacuum blade that does 80/100/120/140/160% Physical DMG to enemies along its path. Lasts for 20s or 8 vacuum blades.",
-    "location": "Gacha",
-    "img": "https://static.wikia.nocookie.net/gensin-impact/images/0/0b/Weapon_Skyward_Pride.png/revision/latest/scale-to-width-down/256?cb=20201116035255"
-  },
-  {
-    "name": "Wolf's Gravestone",
-    "type": "Claymore",
-    "rarity": 5,
-    "atk": 46,
-    "secondary": "ATK",
-    "passive": "Wolfish Tracker",
-    "bonus": "Increases Base ATK by 20/25/30/35/40%. On hit, attacks against enemies with less than 30% HP increase all party members' Base ATK by 40/50/60/70/80% for 12s. Can only occur once every 30s.",
-    "location": "Gacha",
-    "img": "https://static.wikia.nocookie.net/gensin-impact/images/4/4f/Weapon_Wolf%27s_Gravestone.png/revision/latest/scale-to-width-down/256?cb=20201116035623"
-  },
-  {
-    "name": "The Unforged",
-    "type": "Claymore",
-    "rarity": 5,
-    "atk": 46,
-    "secondary": "ATK",
-    "passive": "-",
-    "bonus": "Increases Shield Strength by 20/25/30/35/40%, scoring hits on opponents increases ATK by 4/5/6/7/8% for 8s. Max 5 stacks. Can only occur once every 0.3s. While protected by a shield this ATK increase effect is increased by 100%",
-    "location": "Gacha",
-    "img": "https://static.wikia.nocookie.net/gensin-impact/images/f/f7/Weapon_The_Unforged.png/revision/latest/scale-to-width-down/256?cb=20201129060814"
-  },
-  {
-    "name": "Song of Broken Pines",
-    "type": "Claymore",
-    "rarity": 5,
-    "atk": 49,
-    "secondary": "Physical DMG Bonus",
-    "passive": "Rebel's Banner-Hymn",
-    "bonus": "A part of the 'Millennial Movement' that wanders amidst the winds. Increases ATK by 16%, and when Normal or Charged Attacks hit opponents, the character gains a Sigil of Whispers. This effect can be triggered once every 0.3s. When you possess 4 Sigils of Whispers, all of them will be consumed and all nearby party members will obtain the 'Millennial Movement: Banner-Hymn' effect for 12s. 'Millennial Movement: Banner-Hymn' increases Normal ATK SPD by 12% and increases ATK by 20%. Once this effect is triggered, you will not gain Sigils of Whispers for 20s. Of the many effects of the 'Millennial Movement', buffs of the same type will not stack.",
-    "location": "Gacha",
-    "img": "https://static.wikia.nocookie.net/gensin-impact/images/d/dd/Weapon_Song_of_Broken_Pines.png/revision/latest/scale-to-width-down/256?cb=20210518151739"
-  },
-  {
-    "name": "Leak",
-    "type": "Claymore"
-  },
-  {
-    "name": "Quartz **(unreleased)**",
-    "type": "Claymore",
-    "rarity": 3,
-    "atk": 40,
-    "secondary": "Elemental Mastery",
-    "passive": "Residual Heat",
-    "bonus": "Upon causing an Overloaded, Melt, Burning, Vaporize, or a Pyro-infused Swirl reaction, increases Base ATK by 20/25/30/35/40% for 12s.",
-    "location": "TBA",
-    "img": "https://static.wikia.nocookie.net/gensin-impact/images/7/71/Weapon_Quartz.png/revision/latest/scale-to-width-down/175?cb=20200620071952"
-  },
-  {
-    "name": "Katsuragi's Slasher **(unreleased)**",
-    "type": "Claymore",
-    "rarity": 4,
-    "atk": 42,
-    "secondary": "Energy Recharge",
-    "passive": "Samurai Conduct",
-    "bonus": "Increases Elemental Skill DMG by 6%. After Elemental Skill hits an opponent, lose 3 Energy but regenerate 3 Energy every 2s for the next 6s. This effect can occur once every 10s. Can be triggered even when the character is not on the field.",
-    "location": "TBA",
-    "img": "https://genshin.honeyhunterworld.com/img/weapon/w_2312.png"
-  },
-  {
-    "name": "Primordial Jade Greatsword **(unreleased)**",
-    "type": "Claymore",
-    "rarity": 5,
-    "atk": 48,
-    "secondary": "TBA",
-    "passive": "Protector's Virtue",
-    "bonus": "HP increased by 20%. Additionally, provides an ATK Bonus based on 1.2% of the wielder's Max HP.",
-    "location": "TBA",
-    "img": "https://lh3.googleusercontent.com/proxy/ussQyq-9cdnmC0RZsGo6HNj5Gi1Hd0Hg1KrBxkDLeWBcBqxoejEW8WMZ1B54rfZs_vaAc6TWDY3Djfi6Zr9QMEQ56xFQcJH01pJhn-qbMTKQ_00-_LfpoacRzAnwFWAZUdeQqNt2-l9Sohqe3bc2_3UWQ9m3NQt7PVTCF0nQrmLf_BM"
-  },
-
-
-
-  {
-    "name": "-",
-    "type": "Polearm"
-  },
-  {
-    "name": "Beginner's Protector",
-    "type": "Polearm",
-    "rarity": 1,
-    "atk": 23,
-    "secondary": "-",
-    "passive": "-",
-    "bonus": "-",
-    "location": "Chest",
-    "img": "https://rerollcdn.com/GENSHIN/Weapon/NEW/Beginner's_Protector.png"
-  },
-  {
-    "name": "Iron Point",
-    "type": "Polearm",
-    "rarity": 2,
-    "atk": 33,
-    "secondary": "-",
-    "passive": "-",
-    "bonus": "-",
-    "location": "Chest",
-    "img": ""
-  },
-  {
-    "name": "Black Tassel",
-    "type": "Polearm",
-    "rarity": 3,
-    "atk": 38,
-    "secondary": "HP",
-    "passive": "Bane of the Soft",
-    "bonus": "Increases DMG against slimes by 40/50/60/70/80%.",
-    "location": "Gacha",
-    "img": "https://rerollcdn.com/GENSHIN/Weapon/NEW/Black_Tassel.png"
-  },
-  {
-    "name": "Halberd",
-    "type": "Polearm",
-    "rarity": 3,
-    "atk": 39,
-    "secondary": "ATK",
-    "passive": "Heavy",
-    "bonus": "Normal Attacks deal an additional 160/200/240/280/320% DMG. Can only occur once every 10s.",
-    "location": "Gacha",
-    "img": "https://rerollcdn.com/GENSHIN/Weapon/NEW/Halberd.png"
-  },
-  {
-    "name": "White Tassel",
-    "type": "Polearm",
-    "rarity": 3,
-    "atk": 39,
-    "secondary": "CRIT Rate",
-    "passive": "Sharp",
-    "bonus": "Increases Normal Attack DMG by 24/30/36/42/48%.",
-    "location": "Chest",
-    "img": "https://rerollcdn.com/GENSHIN/Weapon/NEW/White_Tassel.png"
-  },
-  {
-    "name": "Blackcliff Pole",
-    "type": "Polearm",
-    "rarity": 4,
-    "atk": 42,
-    "secondary": "CRIT DMG",
-    "passive": "Press the Advantage",
-    "bonus": "After defeating an enemy, ATK is increased by 12/15/18/21/24% for 30s. This effect has a maximum of 3 stacks, and the duration of each stack is independent of the others.",
-    "location": "Starglitter Exchange",
-    "img": "https://rerollcdn.com/GENSHIN/Weapon/NEW/Blackcliff_Pole.png"
-  },
-  {
-    "name": "Crescent Pike",
-    "type": "Polearm",
-    "rarity": 4,
-    "atk": 44,
-    "secondary": "Physical DMG Bonus",
-    "passive": "Infusion Needle",
-    "bonus": "After picking up an Elemental Orb/Particle, Normal and Charged Attacks deal an additional 20% ATK as DMG for 5s.",
-    "location": "Crafting",
-    "img": "https://rerollcdn.com/GENSHIN/Weapon/NEW/Crescent_Pike.png"
-  },
-  {
-    "name": "Deathmatch",
-    "type": "Polearm",
-    "rarity": 4,
-    "atk": 41,
-    "secondary": "CRIT Rate",
-    "passive": "Gladiator",
-    "bonus": "If there are at least 2 opponents nearby, ATK is increased by 16% and DEF is increased by 16%. If there are less than 2 enemies nearby, ATK is increased by 24%.",
-    "location": "BP Bounty",
-    "img": "https://rerollcdn.com/GENSHIN/Weapon/NEW/Deathmatch.png"
-  },
-  {
-    "name": "Dragon's Bane",
-    "type": "Polearm",
-    "rarity": 4,
-    "atk": 41,
-    "secondary": "Elemental Mastery",
-    "passive": "Bane of Flame and Water",
-    "bonus": "Increases DMG against enemies affected by Hydro or Pyro by 20/24/28/32/36%.",
-    "location": "Gacha",
-    "img": "https://rerollcdn.com/GENSHIN/Weapon/NEW/Dragon's_Bane.png"
-  },
-  {
-    "name": "Lithic Spear",
-    "type": "Polearm",
-    "rarity": 4,
-    "atk": 44,
-    "secondary": "ATK%",
-    "passive": "Lithic Axiom: Unity",
-    "bonus": "For every character in the party who hails from Liyue, the character who equips this weapon gains a 7%/8%/9%/10%/11% ATK increase and a 3%/4%/5%/6%/7% CRIT Rate increase. This effect stacks up to 4 times",
-    "location": "Gacha",
-    "img": "https://genshin.honeyhunterworld.com/img/weapon/lithic_spear.png"
-  },
-  {
-    "name": "Prototype Starglitter",
-    "type": "Polearm",
-    "rarity": 4,
-    "atk": 42,
-    "secondary": "Energy Recharge",
-    "passive": "Magic Affinity",
-    "bonus": "After using an Elemental Skill, increases Normal and Charged Attack DMG by 8% for 12s. Max 2 stacks.",
-    "location": "Crafting",
-    "img": "https://rerollcdn.com/GENSHIN/Weapon/NEW/Prototype_Grudge.png"
-  },
-  {
-    "name": "Favonius Lance",
-    "type": "Polearm",
-    "rarity": 4,
-    "atk": 44,
-    "secondary": "Energy Recharge",
-    "passive": "Windfall",
-    "bonus": "CRIT hits have a 60/70/80/90/100% chance to generate 1 Elemental Orb, which will regenerate 6 Energy for the character. Can only occur once every 12/10.5/9/7.5/6s.",
-    "location": "Gacha",
-    "img": "https://rerollcdn.com/GENSHIN/Weapon/NEW/Favonius_Lance.png"
-  },
-  {
-    "name": "Royal Spear",
-    "type": "Polearm",
-    "rarity": 4,
-    "atk": 44,
-    "secondary": "ATK",
-    "passive": "Focus",
-    "bonus": "Upon damaging an opponent, increases CRIT Rate by 8%. Max 5 stacks. A CRIT hit removes all stacks.",
-    "location": "Starglitter Exchange",
-    "img": "https://rerollcdn.com/GENSHIN/Weapon/NEW/Royal_Spear.png"
-  },
-  {
-    "name": "Dragonspine Spear",
-    "type": "Polearm",
-    "rarity": 4,
-    "atk": 41,
-    "secondary": "Physical DMG Bonus",
-    "passive": "Frost Burial",
-    "bonus": "Hitting an opponent with Normal and Charged Attacks has a 60% chance of forming and dropping an Everfrost Icicle above them, dealing 80% AoE ATK DMG. Opponents affected by Cryo are dealt 200% ATK DMG. Can only occur once every 10s. ",
-    "location": "Craft",
-    "img": "https://genshin.honeyhunterworld.com/img/weapon/dragonspine_spear.png"
-  },
-  {
-    "name": "Vortex Vanquisher",
-    "type": "Polearm",
-    "rarity": 5,
-    "atk": 46,
-    "secondary": "ATK",
-    "passive": "Golden Majesty",
-    "bonus": "Increases Shield Strength by 20/25/30/35/40%, scoring hits on opponents increases ATK by 4/5/6/7/8% for 8s. Max 5 stacks. Can only occur once every 0.3s. While protected by a shield this ATK increase effect is increased by 100%",
-    "location": "Gacha",
-    "img": "https://rerollcdn.com/GENSHIN/Weapon/NEW/Vortex_Vanquisher.png"
-  },
-  {
-    "name": "Primordial Jade Winged-Spear",
-    "type": "Polearm",
-    "rarity": 5,
-    "atk": 48,
-    "secondary": "CRIT Rate",
-    "passive": "Eagle Spear of Justice",
-    "bonus": "On hit, increases ATK by 3.2/3.9/4.6/5.3/6% for 6s. Max 7 stacks. Can only occur once every 0.3s. Full stacks increase Skill DMG by 12/16/20/24/28%.",
-    "location": "Gacha",
-    "img": "https://rerollcdn.com/GENSHIN/Weapon/NEW/Primordial_Jade_Winged-Spear.png"
-  },
-  {
-    "name": "Skyward Spine",
-    "type": "Polearm",
-    "rarity": 5,
-    "atk": 48,
-    "secondary": "Energy Recharge",
-    "passive": "Black Wing",
-    "bonus": "Increases CRIT Rate by 8% and increases Normal ATK SPD by 12%. Additionally, Normal and Charged Attacks hits on enemies have a 50% chance to trigger a vacuum blade that deals 40% of ATK as DMG in a small AoE. This effect can occur no more than once every 2s.",
-    "location": "Gacha",
-    "img": "https://rerollcdn.com/GENSHIN/Weapon/NEW/Skyward_Spine.png"
-  },
-  {
-    "name": "Staff of Homa",
-    "type": "Polearm",
-    "rarity": 5,
-    "atk": 46,
-    "secondary": "CRIT Damage%",
-    "passive": "Reckless Cinnabar",
-    "bonus": "HP increased by 20%/25%/30%/35%/40%. Additionally, provides an ATK Bonus based on 0.8%/1%/1.2%/1.4%/1.6% of the wielder's Max HP. When the wielder's HP is less than 50%, this ATK Bonus is increased by an additional 1%/1.2%/1.4%/1.6%/1.8% of Max HP.",
-    "location": "Gacha",
-    "img": "https://genshin.honeyhunterworld.com/img/weapon/staff_of_homa.png"
-  },
-  {
-    "name": "Leak",
-    "type": "Polearm"
-  },
-  {
-    "name": "Kitain Cross Spear **(unreleased)**",
-    "type": "Polearm",
-    "rarity": 4,
-    "atk": 44,
-    "secondary": "Elemental Mastery",
-    "passive": "Samurai Conduct",
-    "bonus": "Increases Elemental Skill DMG by 6%. After Elemental Skill hits an opponent, lose 3 Energy but regenerate 3 Energy every 2s for the next 6s. This effect can occur once every 10s. Can be triggered even when the character is not on the field.",
-    "location": "TBA",
-    "img": "https://genshin.honeyhunterworld.com/img/weapon/w_3310.png"
-  },
-  {
-    "name": "Deicide **(unreleased)**",
-    "type": "Polearm",
-    "rarity": 5,
-    "atk": 46,
-    "secondary": "ATK%",
-    "passive": "Impale",
-    "bonus": "Energy Recharge is increased by 20%. When a Charged Attack hits an enemy, it will consume a small amount of Energy, which will increase that Charged Attack's DMG by 100%.",
-    "location": "TBA",
-    "img": "https://lh3.googleusercontent.com/proxy/q3dQJd_n7u8HtAKDLCfUDk3U4kmSRgzXkEUUCAYc2rV2849Zd0LopqR2DvxkKT0kJESmSOMgxupGwKzQLIAY91z8ixxBcALQ6cjUZK1HLFs458hrlM4DozJfmVP3gHytlQ6mJrnNWPgXAg2L9pC5X1Hya4QubktxamRByTm4mg8uSdE"
-  },
-  {
-    "name": "Kunwu's Iris Rift **(unreleased)**",
-    "type": "Polearm",
-    "rarity": 5,
-    "atk": 46,
-    "secondary": "ATK",
-    "passive": "Rainbow-Piercing Stinger",
-    "bonus": "Normal Attack hits have a 20% chance of causing the next Charged Attack performed in the following 10s to deal 40% increased DMG.",
-    "location": "Gacha",
-    "img": "https://rerollcdn.com/GENSHIN/Weapon/NEW/Kunwu's_Iris_Rift.png"
-  },
-
-
-
-  {
-    "name": "-",
-    "type": "Bow"
-  },
-  {
-    "name": "Hunter's Bow",
-    "type": "Bow",
-    "rarity": 1,
-    "atk": 23,
-    "secondary": "-",
-    "passive": "-",
-    "bonus": "-",
-    "location": "Chest",
-    "img": "https://rerollcdn.com/GENSHIN/Weapon/NEW/Hunter's_Bow.png"
-  },
-  {
-    "name": "Seasoned Hunter's Bow",
-    "type": "Bow",
-    "rarity": 2,
-    "atk": 33,
-    "secondary": "-",
-    "passive": "-",
-    "bonus": "-",
-    "location": "Chest",
-    "img": "https://rerollcdn.com/GENSHIN/Weapon/NEW/Seasoned_Hunter's_Bow.png"
-  },
-  {
-    "name": "Messenger",
-    "type": "Bow",
-    "rarity": 3,
-    "atk": 40,
-    "secondary": "CRIT DMG",
-    "passive": "Archer's Message",
-    "location": "Aimed Shot hits on weak spots deal an additional 100/125/150/175/200% ATK DMG as CRIT DMG. Can only occur once every 10s.",
-    "img": "Chest"
-  },
-  {
-    "name": "Raven Bow",
-    "type": "Bow",
-    "rarity": 3,
-    "atk": 40,
-    "secondary": "Elemental Mastery",
-    "passive": "Bane of Flame and Water",
-    "bonus": "Increases DMG against enemies affected by Hydro or Pyro by 12/15/18/21/24%.",
-    "location": "Gacha",
-    "img": "https://rerollcdn.com/GENSHIN/Weapon/NEW/Raven_Bow.png"
-  },
-  {
-    "name": "Recurve Bow",
-    "type": "Bow",
-    "rarity": 3,
-    "atk": 38,
-    "secondary": "HP",
-    "passive": "Cull the Weak",
-    "bonus": "Defeating an opponent restores 8/10/12/14/16% HP.",
-    "location": "Chest",
-    "img": "https://rerollcdn.com/GENSHIN/Weapon/NEW/Recurve_Bow.png"
-  },
-  {
-    "name": "Sharpshooter's Oath",
-    "type": "Bow",
-    "rarity": 3,
-    "atk": 39,
-    "secondary": "CRIT DMG",
-    "passive": "Precise",
-    "bonus": "Increases DMG against weak spots by 24/30/36/42/48%.",
-    "location": "Gacha",
-    "img": "https://rerollcdn.com/GENSHIN/Weapon/NEW/Sharpshooter's_Oath.png"
-  },
-  {
-    "name": "Slingshot",
-    "type": "Bow",
-    "rarity": 3,
-    "atk": 38,
-    "secondary": "CRIT Rate",
-    "passive": "Slingshot",
-    "bonus": "If a Normal Attack or Aimed Shot hits a target within 0.3s of being fired, increases DMG by 36/42/48/54/60%; otherwise, it decreases DMG by 10%.",
-    "location": "Gacha",
-    "img": "https://rerollcdn.com/GENSHIN/Weapon/NEW/Slingshot.png"
-  },
-  {
-    "name": "The Stringless",
-    "type": "Bow",
-    "rarity": 4,
-    "atk": 42,
-    "secondary": "Elemental Mastery",
-    "passive": "Arrowless Song",
-    "bonus": "Increases Elemental Skill and Elemental Burst DMG by 24/30/36/42/48%.",
-    "location": "Gacha",
-    "img": "https://rerollcdn.com/GENSHIN/Weapon/NEW/The_Stringless.png"
-  },
-  {
-    "name": "Alley Hunter",
-    "type": "Bow",
-    "rarity": 4,
-    "atk": 41,
-    "secondary": "CRIT Rate",
-    "passive": "Urban Guerrilla",
-    "bonus": "Every 4s a character is on the field, their ATK increases by 4/5/6/7/8% and their CRIT DMG increases by 4/5/6/7/8%. This effect has a maximum of 5 stacks and will not be reset if the character leaves the field, but will be cleared when the character takes DMG.",
-    "location": "Gacha",
-    "img": "https://rerollcdn.com/GENSHIN/Weapon/NEW/Alley_Hunter.png"
-  },
-  {
-    "name": "Blackcliff Warbow",
-    "type": "Bow",
-    "rarity": 4,
-    "atk": 44,
-    "secondary": "CRIT DMG",
-    "passive": "Press the Advantage",
-    "bonus": "After defeating an enemy, ATK is increased by 12/15/18/21/24% for 30s. This effect has a maximum of 3 stacks, and the duration of each stack is independent of the others.",
-    "location": "Starglitter Exchange",
-    "img": "https://rerollcdn.com/GENSHIN/Weapon/NEW/Blackcliff_Warbow.png"
-  },
-  {
-    "name": "Compound Bow",
-    "type": "Bow",
-    "rarity": 4,
-    "atk": 41,
-    "secondary": "Physical DMG Bonus",
-    "passive": "Infusion Arrow",
-    "bonus": "Normal Attack and Aimed Shot hits increase ATK by 4/5/6/7/8% and Normal Attack SPD by 1.2/1.5/1.8/2.1/2.4% for 6s. Max 4 stacks. Can only occur once every 0.3s.",
-    "location": "Crafting",
-    "img": "https://rerollcdn.com/GENSHIN/Weapon/NEW/Compound_Bow.png"
-  },
-  {
-    "name": "Favonius Warbow",
-    "type": "Bow",
-    "rarity": 4,
-    "atk": 41,
-    "secondary": "Energy Recharge",
-    "passive": "Windfall",
-    "bonus": "CRIT hits have a 60/70/80/90/100% chance to generate 1 Elemental Orb, which will regenerate 6 Energy for the character. Can only occur once every 12/10.5/9/7.5/6s.",
-    "location": "Gacha",
-    "img": "https://rerollcdn.com/GENSHIN/Weapon/NEW/Favonius_Warbow.png"
-  },
-  {
-    "name": "Prototype Crescent",
-    "type": "Bow",
-    "rarity": 4,
-    "atk": 42,
-    "secondary": "ATK",
-    "passive": "Unreturning",
-    "bonus": "Aimed Shot hits on weak points increase Movement SPD by 10% and ATK by 6% for 10s.",
-    "location": "Crafting",
-    "img": "https://rerollcdn.com/GENSHIN/Weapon/NEW/Prototype_Crescent.png"
-  },
-  {
-    "name": "Royal Bow",
-    "type": "Bow",
-    "rarity": 4,
-    "atk": 42,
-    "secondary": "ATK",
-    "passive": "Focus",
-    "bonus": "Upon damaging an enemy, increases CRIT Rate by 8%. Max 5 stacks. A CRIT hit removes all stacks.",
-    "location": "Starglitter Exchange",
-    "img": "https://rerollcdn.com/GENSHIN/Weapon/NEW/Royal_Bow.png"
-  },
-  {
-    "name": "Rust",
-    "type": "Bow",
-    "rarity": 4,
-    "atk": 42,
-    "secondary": "ATK",
-    "passive": "Rapid Firing",
-    "bonus": "Increases Normal Attack DMG by 40/50/60/70/80% but decreases Aimed Shot DMG by 8/9/10/11/12%",
-    "location": "Gacha",
-    "img": "https://rerollcdn.com/GENSHIN/Weapon/NEW/Rust.png"
-  },
-  {
-    "name": "Sacrificial Bow",
-    "type": "Bow",
-    "rarity": 4,
-    "atk": 44,
-    "secondary": "Energy Recharge",
-    "passive": "Composed",
-    "bonus": "Elemental Skill, the skill has a 40/50/60/70/80% chance to end its own CD. Can only occur once every 30/26/22/18/14s.",
-    "location": "Gacha",
-    "img": "https://rerollcdn.com/GENSHIN/Weapon/NEW/Sacrificial_Bow.png"
-  },
-  {
-    "name": "The Viridescent Hunt",
-    "type": "Bow",
-    "rarity": 4,
-    "atk": 42,
-    "secondary": "CRIT Rate",
-    "passive": "Verdant Wind",
-    "bonus": "Upon hit, Normal and Aimed Shot Attacks have a 50% chance to generate a Cyclone, which will continuously attract surrounding enemies, dealing 40% of ATK as DMG to these enemies every 0.5s for 4s. This effect can only occur once every 14s.",
-    "location": "BP Bounty",
-    "img": "https://rerollcdn.com/GENSHIN/Weapon/NEW/The_Viridescent_Hunt.png"
-  },
-  {
-    "name": "Windblume Ode",
-    "type": "Bow",
-    "rarity": 4,
-    "atk": 42,
-    "secondary": "Elemental Mastery",
-    "passive": "Windblume Wish",
-    "bonus": "After using an Elemental Skill, receive a boon from the ancient wish of the Windblume, increasing ATK by 16% for 6s.",
-    "location": "Windblume Festival (Event)",
-    "img": "https://genshin.honeyhunterworld.com/img/weapon/w_4311.png"
-  },
-  {
-    "name": "Mitternachts Waltz ",
-    "type": "Bow",
-    "rarity": 4,
-    "atk": 42,
-    "secondary": "Physical DMG Bonus",
-    "passive": "Evernight Duet",
-    "bonus": "Normal Attack hits on opponents increase Elemental Skill DMG by 20% for 5s. Elemental Skill hits on opponents increase Normal Attack DMG by 20% for 5s.",
-    "location": "Gacha",
-    "img": "https://genshin.honeyhunterworld.com/img/weapon/w_4312.png"
-  },
-  {
-    "name": "Skyward Harp",
-    "type": "Bow",
-    "rarity": 5,
-    "atk": 45,
-    "secondary": "CRIT Rate",
-    "passive": "Echoing Ballad",
-    "bonus": "Increases CRIT DMG by 20/25/30/35/40%. Hits have a 60/70/80/90/100% chance to inflict a small AoE attack, dealing 100% Physical ATK DMG. Can only occur once every 4s.",
-    "location": "Gacha",
-    "img": "https://rerollcdn.com/GENSHIN/Weapon/NEW/Skyward_Harp.png"
-  },
-  {
-    "name": "Amos' Bow",
-    "type": "Bow",
-    "rarity": 5,
-    "atk": 46,
-    "secondary": "ATK",
-    "passive": "Strong-Willed",
-    "bonus": "Increases Normal Attack and Aimed Shot DMG by 12/15/18/21/24%. Increases DMG from arrows shot by a further 8/10/12/14/16% for every 0.1s that the arrow is in flight, up to 0.5s. Stacks up to 5 times on each arrow.",
-    "location": "Gacha",
-    "img": "https://rerollcdn.com/GENSHIN/Weapon/NEW/Amos'_Bow.png"
-  },
-  {
-    "name": "Elegy for the End",
-    "type": "Bow",
-    "rarity": 5,
-    "atk": 46,
-    "secondary": "Energy Recharge",
-    "passive": "Windblume Wish",
-    "bonus": "A part of the 'Millennial Movement' that wanders amidst the winds. Increases Elemental Mastery by 60. When the Elemental Skills or Elemental Bursts of the character wielding this weapon hit opponents, that character gains a Sigil of Remembrance. This effect can be triggered once every 0.2s and can be triggered even if said character is not on the field. When you possess 4 Sigils of Remembrance, all of them will be consumed and all nearby party members will obtain the 'Millennial Movement: Farewell Song' effect for 12s. 'Millennial Movement: Farewell Song' increases Elemental Mastery by 100 and increases ATK by 20%. Once this effect is triggered, you will not gain Sigils of Remembrance for 20s. Of the many effects of the 'Millennial Movement', buffs of the same type will not stack.",
-    "location": "Gacha",
-    "img": "https://genshin.honeyhunterworld.com/img/weapon/w_4404.png"
-  },
-  {
-    "name": "Leak",
-    "type": "Bow"
-  },
-  {
-    "name": "Ebony Bow **(unreleased)**",
-    "type": "Bow",
-    "rarity": 3,
-    "atk": 40,
-    "secondary": "ATK%",
-    "passive": "Decimate",
-    "bonus": "Increases DMG against mechanoid Ruin enemies by 40/50/60/70/80%.",
-    "location": "TBA",
-    "img": "https://static.wikia.nocookie.net/gensin-impact/images/a/a1/Weapon_Ebony_Bow.png/revision/latest/scale-to-width-down/205?cb=20200619005942"
-  },
-  {
-    "name": "Kunwu's Wymbarne **(unreleased)**",
-    "type": "Bow",
-    "rarity": 5,
-    "atk": 46,
-    "secondary": "TBA",
-    "passive": "Golden Majesty",
-    "bonus": "Increases Shield Strength by 20%. Scoring hits on opponents increases ATK by 4% for 8s. Max 5 stacks. Can only occur once every 0.3s. While protected by a shield, this ATK increase effect is increased by 100%.",
-    "location": "TBA",
-    "img": "https://pbs.twimg.com/media/EspL5W7VEAIc1Qb.png"
-  },
-  {
-    "name": "Primordial Jade Vista **(unreleased)**",
-    "type": "Bow",
-    "rarity": 5,
-    "atk": 46,
-    "secondary": "TBA",
-    "passive": "Protector's Virtue",
-    "bonus": "HP increased by 20%. Additionally, provides an ATK Bonus based on 1.2% of the wielder's Max HP.",
-    "location": "Gacha",
-    "img": "https://lh3.googleusercontent.com/proxy/6jKURwJxD8fIpDgNRiOddqD950C2KG17YbBVYtxKQ_MR2J7vJIwH7j5Dj8_MsWt1AMEoMtijy97N-8NvH4VGyadH9TE0xtZiaivBFWOvrE48mfamDGJKJSK5bpJStR7FwRDzdYK5kpjT-CmR6KVqjjEZ4lFkKE6dWSANRZQ"
-  },
-  {
-    "name": "Demon-Slayer Bow **(unreleased)**",
-    "type": "Bow",
-    "rarity": 4,
-    "atk": 41,
-    "secondary": "ATK%",
-    "passive": "Full Draw",
-    "bonus": "Increases Normal Attack DMG by 16% and Charged ATK DMG by 12%. When the equipping character's Energy reaches 100%, this effect is increased by 100%.",
-    "location": "TBA",
-    "img": "https://genshin.honeyhunterworld.com/img/weapon/w_4313.png"
-  },
-  {
-    "name": "Mirror Breaker **(unreleased)**",
-    "type": "Bow",
-    "rarity": 5,
-    "atk": 43,
-    "secondary": "TBA",
-    "passive": "TBA",
-    "bonus": "TBA",
-    "location": "TBA",
-    "img": "https://lh3.googleusercontent.com/proxy/WMRNzmypPAyxK4VmV-8DjuhPVe7B-MQBcZleeiT1JJgAkb7lhKtIxv_SEXwSKsdCUap_BJOc4ixWZ71s6v0SCmYLKih-WGI0WamKywk7AuhS08JrEJsnMo-uiHVPQGD0uNSJ8nYcYyoHGLcUcjm9ZNKWf-aSkyjo-sUruWGGCq6NzPY"
-  },
-  {
-    "name": "Thundering Pulse **(unreleased)**",
-    "type": "Bow",
-    "rarity": 5,
-    "atk": 46,
-    "secondary": "CRIT DMG",
-    "passive": "Rule by Thunder",
-    "bonus": "Increases ATK by 20% and grants the might of the Thunder Seal. At stack levels 1/2/3, the Thunder Seal increases Normal Attack DMG by 12/24/40%. The character will obtain 1 stack of Thunder Seal in each of the following scenarios: Normal Attack deals DMG (stack lasts 5s), casting Elemental Skill (stacks lasts 10s); Energy is less than 100% (stack disappears when Energy is full). Each stack's duration is calculated independently.",
-    "location": "TBA",
-    "img": "https://genshin.honeyhunterworld.com/img/weapon/w_4407.png"
-  },
-
-
-
-  {
-    "name": "-",
-    "type": "Catalyst"
-  },
-  {
-    "name": "Apprentice's Notes",
-    "type": "Catalyst",
-    "rarity": 1,
-    "atk": 23,
-    "secondary": "-",
-    "passive": "-",
-    "bonus": "-",
-    "location": "Chest",
-    "img": "https://rerollcdn.com/GENSHIN/Weapon/NEW/Apprentice's_Notes.png"
-  },
-  {
-    "name": "Pocket Grimoire",
-    "type": "Catalyst",
-    "rarity": 3,
-    "atk": 33,
-    "secondary": "-",
-    "passive": "-",
-    "bonus": "-",
-    "location": "Chest",
-    "img": "https://rerollcdn.com/GENSHIN/Weapon/NEW/Pocket_Grimoire.png"
-  },
-  {
-    "name": "Emerald Orb",
-    "type": "Catalyst",
-    "rarity": 3,
-    "atk": 40,
-    "secondary": "Elemental Mastery",
-    "passive": "Rapids",
-    "bonus": "Upon causing a Vaporize, Electro-Charged, Frozen, or a Hydro-infused Swirl reaction, increases Base ATK by 20/25/30/35/40% for 12s.",
-    "location": "Gacha",
-    "img": "https://rerollcdn.com/GENSHIN/Weapon/NEW/Emerald_Orb.png"
-  },
-  {
-    "name": "Magic Guide",
-    "type": "Catalyst",
-    "rarity": 3,
-    "atk": 38,
-    "secondary": "Elemental Mastery",
-    "passive": "Bane of Storm and Tide",
-    "bonus": "Increases DMG against enemies affected by Hydro or Electro by 12/15/18/21/24%.",
-    "location": "Gacha",
-    "img": "https://rerollcdn.com/GENSHIN/Weapon/NEW/Magic_Guide.png"
-  },
-  {
-    "name": "Otherworldly Story",
-    "type": "Catalyst",
-    "rarity": 3,
-    "atk": 39,
-    "secondary": "Energy Recharge",
-    "passive": "Energy Shower",
-    "bonus": "Each Elemental Orb or Particle collected restores 1/1.25/1.5/1.75/2% HP.",
-    "location": "Gacha",
-    "img": "https://rerollcdn.com/GENSHIN/Weapon/NEW/Otherworldly_Story.png"
-  },
-  {
-    "name": "Thrilling Tales of Dragon Slayers",
-    "type": "Catalyst",
-    "rarity": 3,
-    "atk": 39,
-    "secondary": "HP",
-    "passive": "Legacy",
-    "bonus": "When switching characters, the new character taking the field has their ATK increased by 24/30/36/42/48% for 10s. This effect can only occur once every 20s.",
-    "location": "Gacha",
-    "img": "https://rerollcdn.com/GENSHIN/Weapon/NEW/Thrilling_Tales_of_Dragon_Slayers.png"
-  },
-  {
-    "name": "Twin Nephrite",
-    "type": "Catalyst",
-    "rarity": 3,
-    "atk": 40,
-    "secondary": "CRIT Rate",
-    "passive": "Guerilla Tactic",
-    "bonus": "Defeating an enemy increases Movement SPD and ATK by 12/14/16/18/20% for 15s.",
-    "location": "Gacha",
-    "img": "https://rerollcdn.com/GENSHIN/Weapon/NEW/Twin_Nephrite.png"
-  },
-  {
-    "name": "Blackcliff Agate",
-    "type": "Catalyst",
-    "rarity": 4,
-    "atk": 42,
-    "secondary": "CRIT DMG",
-    "passive": "Press the Advantage",
-    "bonus": "After defeating an enemy, ATK is increased by 12/15/18/21/24% for 30s. This effect has a maximum of 3 stacks, and the duration of each stack is independent of the others.",
-    "location": "Starglitter Exchange",
-    "img": "https://rerollcdn.com/GENSHIN/Weapon/NEW/Blackcliff_Amulet.png"
-  },
-  {
-    "name": "Favonius Codex",
-    "type": "Catalyst",
-    "rarity": 4,
-    "atk": 42,
-    "secondary": "Energy Recharge",
-    "passive": "Windfall",
-    "bonus": "CRIT hits have a 60/70/80/90/100% chance to generate 1 Elemental Orb, which will regenerate 6 Energy for the character. Can only occur once every 12/10.5/9/7.5/6s.",
-    "location": "Gacha",
-    "img": "https://rerollcdn.com/GENSHIN/Weapon/NEW/Favonius_Codex.png"
-  },
-  {
-    "name": "Mappa Mare",
-    "type": "Catalyst",
-    "rarity": 4,
-    "atk": 44,
-    "secondary": "Elemental Mastery",
-    "passive": "Infusion Scroll",
-    "bonus": "Triggering an Elemental reaction grants a 8/10/12/14/16% Elemental DMG Bonus for 10s. Max 2 stacks.",
-    "location": "Crafting",
-    "img": "https://rerollcdn.com/GENSHIN/Weapon/NEW/Mappa_Mare.png"
-  },
-  {
-    "name": "Prototype Amber",
-    "type": "Catalyst",
-    "rarity": 4,
-    "atk": 42,
-    "secondary": "HP",
-    "passive": "Gilding",
-    "bonus": "Using an Elemental Burst regenerates 4/4.5/5/5.5/6 Energy every 2s for 6s. Additionally, all party members will regenerate 4/4.5/5/5.5/6% HP every 2s for this duration.",
-    "location": "Crafting",
-    "img": "https://rerollcdn.com/GENSHIN/Weapon/NEW/Prototype_Malice.png"
-  },
-  {
-    "name": "Royal Grimoire",
-    "type": "Catalyst",
-    "rarity": 4,
-    "atk": 44,
-    "secondary": "ATK",
-    "passive": "Focus",
-    "bonus": "Upon damaging an enemy, increases CRIT Rate by 8%. Max 5 stacks. A CRIT hit removes all stacks.",
-    "location": "Starglitter Exchange",
-    "img": ""
-  },
-  {
-    "name": "Sacrificial Fragments",
-    "type": "Catalyst",
-    "rarity": 4,
-    "atk": 41,
-    "secondary": "Elemental Mastery",
-    "passive": "Composed",
-    "bonus": "After damaging an opponent with an Elemental Skill, the skill has a 40/50/60/70/80% chance to end its own CD. Can only occur once every 30/26/22/18/14s.",
-    "location": "Gacha",
-    "img": "https://rerollcdn.com/GENSHIN/Weapon/NEW/Sacrificial_Fragments.png"
-  },
-  {
-    "name": "Solar Pearl",
-    "type": "Catalyst",
-    "rarity": 4,
-    "atk": 42,
-    "secondary": "CRIT Rate",
-    "passive": "Solar Shine",
-    "bonus": "Normal Attack hits increase Elemental Skill and Elemental Burst DMG by 20/25/30/35/40% for 6s. Likewise, Elemental Skill or Elemental Burst hits increase Normal Attack DMG by 20/25/30/35/40% for 6s.",
-    "location": "BP Bounty",
-    "img": "https://rerollcdn.com/GENSHIN/Weapon/NEW/Solar_Pearl.png"
-  },
-  {
-    "name": "The Widsith",
-    "type": "Catalyst",
-    "rarity": 4,
-    "atk": 42,
-    "secondary": "CRIT DMG",
-    "passive": "Debut",
-    "bonus": "When the character takes the field, they gain a random theme song for 10s:\nRecitative: Increases Base ATK by 60%\nInterlude: Elemental Mastery is increased by 240\nAria: Increases all Elemental DMG by 48%\nCan only occur once every 30s",
-    "location": "Gacha",
-    "img": "https://rerollcdn.com/GENSHIN/Weapon/NEW/The_Widsith.png"
-  },
-  {
-    "name": "Wine and Song",
-    "type": "Catalyst",
-    "rarity": 4,
-    "atk": 42,
-    "secondary": "Energy Recharge",
-    "passive": "Wind in the Square",
-    "bonus": "For every character in the party who hails from Mondstadt, the character who equips this weapon gains 8/10/12/14/16% ATK increase and 3/3.5/4/4.5/5% Movement SPD increase.",
-    "location": "Gacha",
-    "img": "https://rerollcdn.com/GENSHIN/Weapon/NEW/Wine_and_Song.png"
-  },
-  {
-    "name": "Eye of Perception",
-    "type": "Catalyst",
-    "rarity": 4,
-    "atk": 41,
-    "secondary": "ATK",
-    "passive": "Echo",
-    "bonus": "Normal and Charged Attacks have a 50% chance to fire a Bolt of Perception, dealing 240/270/300/330/360% ATK as DMG. This bolt can bounce between enemies a maximum of 4 times. This effect can occur once every 12/11/10/9/8s.",
-    "location": "Gacha",
-    "img": "https://rerollcdn.com/GENSHIN/Weapon/NEW/Eye_of_Perception.png"
-  },
-  {
-    "name": "Frostbearer",
-    "type": "Catalyst",
-    "rarity": 4,
-    "atk": 42,
-    "secondary": "ATK%",
-    "passive": "Frost Burial",
-    "bonus": "Hitting an opponent with Normal and Charged Attacks has a 60/70/80/90/100% chance of forming and dropping an Everfrost Icicle above them, dealing 80/95/110/125/140% AoE ATK DMG. Opponents affected by Cryo are dealt 200/240/280/320/360% ATK DMG. Can only occur once every 10s.",
-    "location": "Craft",
-    "img": "https://genshin.honeyhunterworld.com/img/weapon/frostbearer.png"
-  },
-  {
-    "name": "Dodoco Tales",
-    "type": "Catalyst",
-    "rarity": 4,
-    "atk": 41,
-    "secondary": "ATK%",
-    "passive": "Dodoventure!",
-    "bonus": "Normal Attack hits on opponents increase Charged Attack DMG by 16% for 6s. Charged Attack hits on opponents increase ATK by 8% for 6s.",
-    "location": "Midsummer Island Adventure (Event)",
-    "img": "https://genshin.honeyhunterworld.com/img/weapon/w_5312.png"
-  },
-  {
-    "name": "Lost Prayer to the Sacred Winds",
-    "type": "Catalyst",
-    "rarity": 5,
-    "atk": 44,
-    "secondary": "CRIT Rate",
-    "passive": "Boundless Blessing",
-    "bonus": "Increases Movement SPD by 10%. When in battle, earn a 6/8/10/12/14% Elemental DMG Bonus every 4s. Max 4 stacks. Lasts until the character falls or leaves combat.",
-    "location": "Gacha",
-    "img": "https://rerollcdn.com/GENSHIN/Weapon/NEW/Lost_Prayer_to_the_Sacred_Winds.png"
-  },
-  {
-    "name": "Skyward Atlas",
-    "type": "Catalyst",
-    "rarity": 5,
-    "atk": 45,
-    "secondary": "ATK",
-    "passive": "Wandering Clouds",
-    "bonus": "Increases Elemental DMG Bonus by 12/15/18/21/24%. Normal Attack hits have a 50% chance to earn the favor of the clouds. which actively seek out nearby enemies to attack for 15s, dealing 160/200/240/280/320% ATK DMG. Can only occur once every 30s.",
-    "location": "Gacha",
-    "img": "https://rerollcdn.com/GENSHIN/Weapon/NEW/Skyward_Atlas.png"
-  },
-  {
-    "name": "Memory of Dust",
-    "type": "Catalyst",
-    "rarity": 5,
-    "atk": 46,
-    "secondary": "ATK",
-    "passive": "Golden Majesty",
-    "bonus": "Increase Shield Strength by 20/25/30/35/40%. Scoring hits on opponents increases ATK by 4/5/6/7/8% for 8s. Max 5 stacks. Can only occur once every 0.3s. While protected by a shield, this ATK increase effect is increased by 100%.",
-    "location": "Gacha",
-    "img": "https://static.wikia.nocookie.net/gensin-impact/images/c/ca/Weapon_Memory_of_Dust.png/revision/latest/scale-to-width-down/256?cb=20201119232148"
-  },
-  {
-    "name": "Leak",
-    "type": "Catalyst"
-  },
-  {
-    "name": "Amber Bead **(unreleased)**",
-    "type": "Catalyst",
-    "rarity": 3,
-    "atk": 39,
-    "secondary": "Elemental Mastery",
-    "passive": "Elemental Mastery",
-    "bonus": "Normal Attack hits increase all Elemental DMG by 6% for 6s. Max 2 stacks.",
-    "location": "TBA",
-    "img": "https://cdn.discordapp.com/attachments/845147111570014218/854304007769161768/Screen_Shot_2021-06-15_at_17.18.35.png"
-  },
-  {
-    "name": "White Dragon Ring **(unreleased)**",
-    "type": "Catalyst",
-    "rarity": 4,
-    "atk": 44,
-    "secondary": "Energy Recharge",
-    "passive": "Sakura Palace",
-    "bonus": "After the character equipped with this weapon triggers an Electro elemental reaction, nearby party members of an Elemental Type involved in the elemental reaction receive a 10% Elemental DMG Bonus for their element, lasting 6s. Elemental Bonuses gained in this way cannot be stacked.",
-    "location": "TBA",
-    "img": "https://genshin.honeyhunterworld.com/img/weapon/w_5313.png"
-  },
-  {
-    "name": "Lost Ballade **(unreleased)**",
-    "type": "Catalyst",
-    "rarity": 5,
-    "atk": 46,
-    "secondary": "TBA",
-    "passive": "Kreuzlied's Ballad",
-    "bonus": "Increases DMG dealt by 5%. Additionally, picking up an Elemental Orb/Particle gives you one Charge stack: a stack increases ATK by 5% for 6s. This effect has a maximum of 4 stacks. Once 4 stacks have been gained, and this effect is triggered again, gain Kreuzlied's Ballad: ATK is increased by an additional 30% and CRIT Rate is increased by 20% for 12s. Kreuzlied's Ballad can only be activated once every 30s.",
-    "location": "TBA",
-    "img": "https://external-preview.redd.it/cdlKruWbC8GaIDlVb_vt-sLLYXMazbkBGFwehcAFLCM.jpg?auto=webp&s=50ace8253543ff88d782095cf24a5f44f6f19d99"
-  },
-  {
-    "name": "Primordial Jade Regalia **(unreleased)**",
-    "type": "Catalyst",
-    "rarity": 5,
-    "atk": 48,
-    "secondary": "TBA",
-    "passive": "TBA",
-    "bonus": "Basic: Normal and Charged Attack DMG increased by 20%; Special Effect: every Normal Attack applies an Unstable Crystal Core on the enemy hit. A Charged Attack will cause an explosion of these Crystal Cores, dealing additional DMG based on the number of nearby Crystal Cores",
-    "location": "TBA",
-    "img": "https://pbs.twimg.com/media/EvZ9S8hWQAURZg4.png"
-  },
-  {
-    "name": "Diamond Visage **(unreleased)**",
-    "type": "Catalyst",
-    "rarity": 5,
-    "atk": 44,
-    "secondary": "TBA",
-    "passive": "TBA",
-    "bonus": "TBA",
-    "location": "TBA",
-    "img": "https://lh3.googleusercontent.com/proxy/mZIdf2MvmG7hlYs63jT5w8ThP1ExIrzxgulNtTxvhmq5OpcLb4ZkwaJnKRklemNAARcum0hIu2IFdV7uezj2QwIyM6_dmWWcunI-4Sf_seaI2DMfTSiKSuVwMeT3uN3C0uPqb8z5hTurI1YSp9vkSvg1Jp9qfCPdqg8pBzc"
+  {
+    "name":"alley hunter",
+    "id":"alley-hunter"
+  },
+  {
+    "name":"amber catalyst",
+    "id":"amber-catalyst"
+  },
+  {
+    "name":"amos bow",
+    "id":"amos-bow"
+  },
+  {
+    "name":"apprentice's notes",
+    "id":"apprentice-s-notes"
+  },
+  {
+    "name":"aquila favonia",
+    "id":"aquila-favonia"
+  },
+  {
+    "name":"beginner's protector",
+    "id":"beginner-s-protector"
+  },
+  {
+    "name":"black tassel",
+    "id":"black-tassel"
+  },
+  {
+    "name":"blackcliff amulet",
+    "id":"blackcliff-amulet"
+  },
+  {
+    "name":"blackcliff longsword",
+    "id":"blackcliff-longsword"
+  },
+  {
+    "name":"blackcliff pole",
+    "id":"blackcliff-pole"
+  },
+  {
+    "name":"blackcliff slasher",
+    "id":"blackcliff-slasher"
+  },
+  {
+    "name":"blackcliff warbow",
+    "id":"blackcliff-warbow"
+  },
+  {
+    "name":"bloodtainted greatsword",
+    "id":"bloodtainted-greatsword"
+  },
+  {
+    "name":"compound bow",
+    "id":"compound-bow"
+  },
+  {
+    "name":"cool steel",
+    "id":"cool-steel"
+  },
+  {
+    "name":"crescent pike",
+    "id":"crescent-pike"
+  },
+  {
+    "name":"dark iron sword",
+    "id":"dark-iron-sword"
+  },
+  {
+    "name":"deathmatch",
+    "id":"deathmatch"
+  },
+  {
+    "name":"debate club",
+    "id":"debate-club"
+  },
+  {
+    "name":"dragon's bane",
+    "id":"dragon-s-bane"
+  },
+  {
+    "name":"dragonspine spear",
+    "id":"dragonspine-spear"
+  },
+  {
+    "name":"dull blade",
+    "id":"dull-blade"
+  },
+  {
+    "name":"ebony bow",
+    "id":"ebony-bow"
+  },
+  {
+    "name":"emerald orb",
+    "id":"emerald-orb"
+  },
+  {
+    "name":"eye of perception",
+    "id":"eye-of-perception"
+  },
+  {
+    "name":"favonius codex",
+    "id":"favonius-codex"
+  },
+  {
+    "name":"favonius greatsword",
+    "id":"favonius-greatsword"
+  },
+  {
+    "name":"favonius lance",
+    "id":"favonius-lance"
+  },
+  {
+    "name":"favonius sword",
+    "id":"favonius-sword"
+  },
+  {
+    "name":"favonius warbow",
+    "id":"favonius-warbow"
+  },
+  {
+    "name":"ferrous shadow",
+    "id":"ferrous-shadow"
+  },
+  {
+    "name":"festering desire",
+    "id":"festering-desire"
+  },
+  {
+    "name":"fillet blade",
+    "id":"fillet-blade"
+  },
+  {
+    "name":"freedom sworn",
+    "id":"freedom-sworn"
+  },
+  {
+    "name":"frostbearer",
+    "id":"frostbearer"
+  },
+  {
+    "name":"halberd",
+    "id":"halberd"
+  },
+  {
+    "name":"harbinger of dawn",
+    "id":"harbinger-of-dawn"
+  },
+  {
+    "name":"hunter's bow",
+    "id":"hunter-s-bow"
+  },
+  {
+    "name":"iron point",
+    "id":"iron-point"
+  },
+  {
+    "name":"iron sting",
+    "id":"iron-sting"
+  },
+  {
+    "name":"lion's roar",
+    "id":"lion-s-roar"
+  },
+  {
+    "name":"lithic blade",
+    "id":"lithic-blade"
+  },
+  {
+    "name":"lithic spear",
+    "id":"lithic-spear"
+  },
+  {
+    "name":"lost prayer to the sacred winds",
+    "id":"lost-prayer-to-the-sacred-winds"
+  },
+  {
+    "name":"magic guide",
+    "id":"magic-guide"
+  },
+  {
+    "name":"mappa mare",
+    "id":"mappa-mare"
+  },
+  {
+    "name":"memory of dust",
+    "id":"memory-of-dust"
+  },
+  {
+    "name":"messenger",
+    "id":"messenger"
+  },
+  {
+    "name":"old merc's pal",
+    "id":"old-merc-s-pal"
+  },
+  {
+    "name":"otherworldly-story",
+    "id":"otherworldly-story"
+  },
+  {
+    "name":"pocket grimoire",
+    "id":"pocket-grimoire"
+  },
+  {
+    "name":"primordial jade cutter",
+    "id":"primordial-jade-cutter"
+  },
+  {
+    "name":"primordial jade winged spear",
+    "id":"primordial-jade-winged-spear"
+  },
+  {
+    "name":"pjws",
+    "id":"primordial-jade-winged-spear"
+  },
+  {
+    "name":"prototype archaic",
+    "id":"prototype-archaic"
+  },
+  {
+    "name":"prototype crescent",
+    "id":"prototype-crescent"
+  },
+  {
+    "name":"prototype grudge",
+    "id":"prototype-grudge"
+  },
+  {
+    "name":"prototype malice",
+    "id":"prototype-malice"
+  },
+  {
+    "name":"prototype rancour",
+    "id":"prototype-rancour"
+  },
+  {
+    "name":"quartz",
+    "id":"quartz"
+  },
+  {
+    "name":"rainslasher",
+    "id":"rainslasher"
+  },
+  {
+    "name":"raven bow",
+    "id":"raven-bow"
+  },
+  {
+    "name":"recurve bow",
+    "id":"recurve-bow"
+  },
+  {
+    "name":"royal bow",
+    "id":"royal-bow"
+  },
+  {
+    "name":"royal greatsword",
+    "id":"royal-greatsword"
+  },
+  {
+    "name":"royal grimoire",
+    "id":"royal-grimoire"
+  },
+  {
+    "name":"royal longsword",
+    "id":"royal-longsword"
+  },
+  {
+    "name":"rust",
+    "id":"rust"
+  },
+  {
+    "name":"sacrificial bow",
+    "id":"sacrificial-bow"
+  },
+  {
+    "name":"sacrificial fragments",
+    "id":"sacrificial-fragments"
+  },
+  {
+    "name":"sacrificial greatsword",
+    "id":"sacrificial-greatsword"
+  },
+  {
+    "name":"sacrificial sword",
+    "id":"sacrificial-sword"
+  },
+  {
+    "name":"seasoned hunter's bow",
+    "id":"seasoned-hunter-s-bow"
+  },
+  {
+    "name":"serpent spine",
+    "id":"serpent-spine"
+  },
+  {
+    "name":"sharpshooter's oath",
+    "id":"sharpshooter-s-oath"
+  },
+  {
+    "name":"silver sword",
+    "id":"silver-sword"
+  },
+  {
+    "name":"skyrider greatsword",
+    "id":"skyrider-greatsword"
+  },
+  {
+    "name":"skyrider sword",
+    "id":"skyrider-sword"
+  },
+  {
+    "name":"skyward atlas",
+    "id":"skyward-atlas"
+  },
+  {
+    "name":"skyward blade",
+    "id":"skyward-blade"
+  },
+  {
+    "name":"skyward harp",
+    "id":"skyward-harp"
+  },
+  {
+    "name":"skyward pride",
+    "id":"skyward-pride"
+  },
+  {
+    "name":"skyward spine",
+    "id":"skyward-spine"
+  },
+  {
+    "name":"slingshot",
+    "id":"slingshot"
+  },
+  {
+    "name":"snow tombed starsilver",
+    "id":"snow-tombed-starsilver"
+  },
+  {
+    "name":"solar pearl",
+    "id":"solar-pearl"
+  },
+  {
+    "name":"staff of homa",
+    "id":"staff-of-homa"
+  },
+  {
+    "name":"summit shaper",
+    "id":"summit-shaper"
+  },
+  {
+    "name":"sword of descension",
+    "id":"sword-of-descension"
+  },
+  {
+    "name":"the alley flash",
+    "id":"the-alley-flash"
+  },
+  {
+    "name":"the bell",
+    "id":"the-bell"
+  },
+  {
+    "name":"the black sword",
+    "id":"the-black-sword"
+  },
+  {
+    "name":"the flute",
+    "id":"the-flute"
+  },
+  {
+    "name":"the stringless",
+    "id":"the-stringless"
+  },
+  {
+    "name":"the viridescent hunt",
+    "id":"the-viridescent-hunt"
+  },
+  {
+    "name":"the widsith",
+    "id":"the-widsith"
+  },
+  {
+    "name":"thrilling tales of dragon slayers",
+    "id":"thrilling-tales-of-dragon-slayers"
+  },
+  {
+    "name":"traveler's handy sword",
+    "id":"traveler-s-handy-sword"
+  },
+  {
+    "name":"twin nephrite",
+    "id":"twin-nephrite"
+  },
+  {
+    "name":"vortex vanquisher",
+    "id":"vortex-vanquisher"
+  },
+  {
+    "name":"waster greatsword",
+    "id":"waster-greatsword"
+  },
+  {
+    "name":"white iron greatsword",
+    "id":"white-iron-greatsword"
+  },
+  {
+    "name":"white tassel",
+    "id":"white-tassel"
+  },
+  {
+    "name":"whiteblind",
+    "id":"whiteblind"
+  },
+  {
+    "name":"windblume ode",
+    "id":"windblume-ode"
+  },
+  {
+    "name":"wine and song",
+    "id":"wine-and-song"
+  },
+  {
+    "name":"wolf's gravestone",
+    "id":"wolf-s-gravestone"
+  },
+  {
+    "name":"wgs",
+    "id":"wolf-s-gravestone"
   }
 ]
