@@ -1,212 +1,118 @@
 [
   {
-    "set": "Adventurer",
-    "max-rarity": 3,
-    "2-set bonus": "Max HP increased by 1,000.",
-    "4-set bonus": "Opening chest regenerates 30% Max HP over 5s.",
-    "img": "https://rerollcdn.com/GENSHIN/Gear/adventurer.png"
+    "name":"adventurer",
+    "id":"adventurer"
   },
   {
-    "set": "Traveling Doctor",
-    "max-rarity": 3,
-    "2-set bonus": "Increases incoming healing by 20%.",
-    "4-set bonus": "Using Elemental Burst restores 20% HP.",
-    "img": "https://rerollcdn.com/GENSHIN/Gear/traveling_doctor.png"
+    "name":"archaic petra",
+    "id":"archaic-petra"
   },
   {
-    "set": "Lucky Dog",
-    "max-rarity": 3,
-    "2-set bonus": "DEF increased by 100.",
-    "4-set bonus": "Picking up Mora restores 300 HP.",
-    "img": "https://rerollcdn.com/GENSHIN/Gear/lucky_dog.png"
+    "name":"berserker",
+    "id":"berserker"
   },
   {
-    "set": "Resolution of Sojourner",
-    "max-rarity": 4,
-    "2-set bonus": "ATK +18%",
-    "4-set bonus": "Increases Charged Attack CRIT Rate by 30%.",
-    "img": "https://rerollcdn.com/GENSHIN/Gear/resolution_of_sojourner.png"
+    "name":"blizzard strayer",
+    "id":"blizzard-strayer"
   },
   {
-    "set": "Brave Heart",
-    "max-rarity": 4,
-    "2-set bonus": "ATK +18%",
-    "4-set bonus": "Increases DMG by 30% against enemies with more than 50% HP.",
-    "img": "https://rerollcdn.com/GENSHIN/Gear/brave_heart.png"
+    "name":"bloodstained chivalry",
+    "id":"bloodstained-chivalry"
   },
   {
-    "set": "Martial Artist",
-    "max-rarity": 4,
-    "2-set bonus": "Increases Normal Attack and Charged Attack DMG by 15%.",
-    "4-set bonus": "After using Elemental Skill, increases Normal Attack and Charged Attack DMG by 25% for 8s.",
-    "img": "https://rerollcdn.com/GENSHIN/Gear/martial_artist.png"
+    "name":"brave heart",
+    "id":"brave-heart"
   },
   {
-    "set": "Berserker",
-    "max-rarity": 4,
-    "2-set bonus": "CRIT Rate +12%",
-    "4-set bonus": "When HP is below 70%, CRIT Rate increases by an additional 24%.",
-    "img": "https://rerollcdn.com/GENSHIN/Gear/berserker.png"
+    "name":"crimson witch of flames",
+    "id":"crimson-witch-of-flames"
   },
   {
-    "set": "Gambler",
-    "max-rarity": 4,
-    "2-set bonus": "Elemental Skill DMG increased by 20%",
-    "4-set bonus": "Defeating an enemy has 100% chance to remove Elemental Skill CD. Can only occur once every 15s.",
-    "img": "https://rerollcdn.com/GENSHIN/Gear/gambler.png"
+    "name":"defender's will",
+    "id":"defender-s-will"
   },
   {
-    "set": "Defender's Will",
-    "max-rarity": 4,
-    "2-set bonus": "Base DEF +30%",
-    "4-set bonus": "Increases Elemental RES by 30% for each element present in the party.",
-    "img": "https://rerollcdn.com/GENSHIN/Gear/defender's_will.png"
+    "name":"gambler",
+    "id":"gambler"
   },
   {
-    "set": "Tiny Miracle",
-    "max-rarity": 4,
-    "2-set bonus": "All Elemental RES increased by 20%",
-    "4-set bonus": "Incoming elemental DMG increases corresponding Elemental RES by 30% for 10s. Can only occur once every 10s.",
-    "img": "https://rerollcdn.com/GENSHIN/Gear/tiny_miracle.png"
+    "name":"gladiator's finale",
+    "id":"gladiator-s-finale"
   },
   {
-    "set": "Scholar",
-    "max-rarity": 4,
-    "2-set bonus": "Energy Recharge +20%",
-    "4-set bonus": "Gaining Energy gives 3 Energy to all party members who have a bow or a catalyst equipped. Can only occurs once every 3s.",
-    "img": "https://rerollcdn.com/GENSHIN/Gear/scholar.png"
+    "name":"heart of depth",
+    "id":"heart-of-depth"
   },
   {
-    "set": "Instructor",
-    "max-rarity": 4,
-    "2-set bonus": "Increases Elemental Mastery by 80.",
-    "4-set bonus": "After using Elemental Skill, increases all party members' Elemental Mastery by 120 for 8s.",
-    "img": "https://rerollcdn.com/GENSHIN/Gear/instructor.png"
+    "name":"instructor",
+    "id":"instructor"
   },
   {
-    "set": "The Exile",
-    "max-rarity": 4,
-    "2-set bonus": "Energy Recharge +20%",
-    "4-set bonus": "Using an Elemental Burst regenerates 2 Energy for other party members every 2s for 6s. This effect cannot stack.",
-    "img": "https://rerollcdn.com/GENSHIN/Gear/the_exile.png"
+    "name":"lavawalker",
+    "id":"lavawalker"
   },
   {
-    "set": "Bloodstained Chivalry",
-    "max-rarity": 5,
-    "2-set bonus": "Physical DMG +25%",
-    "4-set bonus": "After defeating an opponent, increases Charged Attack DMG by 50%, and reduces its Stamina cost to 0 for 10s.",
-    "img": "https://rerollcdn.com/GENSHIN/Gear/bloodstained_chivalry.png"
+    "name":"lucky-dog",
+    "id":"lucky dog"
   },
   {
-    "set": "Gladiator's Finale",
-    "max-rarity": 5,
-    "2-set bonus": "ATK +18%",
-    "4-set bonus": "If the wielder of this artifact set uses a Sword, Claymore or Polearm, increases their Normal Attack DMG by 35%.",
-    "img": "https://rerollcdn.com/GENSHIN/Gear/gladiator's_finale.png"
+    "name":"maiden beloved",
+    "id":"maiden-beloved"
   },
   {
-    "set": "Wanderer's Troupe",
-    "max-rarity": 5,
-    "2-set bonus": "Elemental Mastery +80",
-    "4-set bonus": "Increases Charged Attack DMG by 35% if the character uses a Catalyst or Bow.",
-    "img": "https://rerollcdn.com/GENSHIN/Gear/wanderer's_troupe.png"
+    "name":"martial artist",
+    "id":"martial-artist"
   },
   {
-    "set": "Pale Flame",
-    "max-rarity": 5,
-    "2-set bonus": "Physical DMG is increased by 25%.",
-    "4-set bonus": "When an Elemental Skill hits an opponent, ATK is increased by 9% for 7s. This effect stacks up to 2 times and can be triggered once every 0.3s. Once 2 stacks are reached, the 2-set effect is increased by 100%.",
-    "img": "https://static.wikia.nocookie.net/gensin-impact/images/e/e7/Item_Stainless_Bloom.png/revision/latest?cb=20210416205644"
+    "name":"noblesse oblige",
+    "id":"noblesse-oblige"
   },
   {
-    "set": "Thundering Fury",
-    "max-rarity": 5,
-    "2-set bonus": "Gain a 15% Electro DMG Bonus.",
-    "4-set bonus": "Increases damage caused by Overloaded, Electro-Charged, and Superconduct DMG by 40%. Triggering such effects decreases Elemental Skill CD by 1s. Can only occur once every 0.8s.",
-    "img": "https://rerollcdn.com/GENSHIN/Gear/thundering_fury.png"
+    "name":"pale flame",
+    "id":"pale-flame"
   },
   {
-    "set": "Viridescent Venerer",
-    "max-rarity": 5,
-    "2-set bonus": "Gain a 15% Anemo DMG Bonus.",
-    "4-set bonus": "Increases Swirl DMG by 60%. Decreases opponent's Elemental RES to the element infused in the Swirl by 40% for 10s.",
-    "img": "https://rerollcdn.com/GENSHIN/Gear/viridescent_venerer.png"
+    "name":"resolution of sojourner",
+    "id":"resolution-of-sojourner"
   },
   {
-    "set": "Archaic Petra",
-    "max-rarity": 5,
-    "2-set bonus": "Gain a 15% Geo DMG Bonus.",
-    "4-set bonus": "Upon obtaining an Elemental Shard created through a Crystallize Reaction, all party members gain a 35% DMG Bonus for that particular element for 10s. Only one form of Elemental DMG Bonus can be gained in this manner at any one time.",
-    "img": "https://rerollcdn.com/GENSHIN/Gear/archaic_petra.png"
+    "name":"retracing bolide",
+    "id":"retracing-bolide"
   },
   {
-    "set": "Crimson Witch of Flames",
-    "max-rarity": 5,
-    "2-set bonus": "Gain a 15% Pyro DMG Bonus.",
-    "4-set bonus": "Increases Overloaded and Burning DMG by 40%. Increases Vaporize and Melt DMG by 15%. Using an Elemental Skill increases 2-Piece Set effects by 50% for 10s. Max 3 stacks.",
-    "img": "https://rerollcdn.com/GENSHIN/Gear/crimson_witch_of_flames.png"
+    "name":"scholar",
+    "id":"scholar"
   },
   {
-    "set": "Noblesse Oblige",
-    "max-rarity": 5,
-    "2-set bonus": "Elemental Burst DMG +20%",
-    "4-set bonus": "Using an Elemental Burst increase all party memebers' ATK by 20% for 12s. This effect cannot stack.",
-    "img": "https://rerollcdn.com/GENSHIN/Gear/noblesse_oblige.png"
+    "name":"tenacity of the millelith",
+    "id":"tenacity-of-the-millelith"
   },
   {
-    "set": "Blizzard Strayer",
-    "max-rarity": 5,
-    "2-set bonus": "Cryo DMG Bonus +15%",
-    "4-set bonus": "When a character attacks an opponent affected by Cryo, their CRIT Rate is increased by 20%. If the opponent is Frozen, CRIT Rate is increased by an additional 20%.",
-    "img": "https://genshin.honeyhunterworld.com/img/art/blizzard_walker_4.png"
+    "name":"the exile",
+    "id":"the-exile"
   },
   {
-    "set": "Heart of Depth",
-    "max-rarity": 5,
-    "2-set bonus": "Hydro DMG Bonus +15%",
-    "4-set bonus": "After using Elemental Skill, increases Normal Attack and Charged Attack DMG by 30% for 15s.",
-    "img": "https://genshin.honeyhunterworld.com/img/art/depth_of_heart_4.png"
+    "name":"thundering fury",
+    "id":"thundering-fury"
   },
   {
-    "set": "Glacier and Snowfield (**unreleased**)",
-    "max-rarity": 5,
-    "2-set bonus": "Cryo DMG Bonus +15%",
-    "4-set bonus": "Increases Superconduct DMG by 100%. Increases Melt DMG by 15%. Using an Elemental Burst increases Cryo DMG Bonus by 30% for 10s.",
-    "img": "https://genshin.honeyhunterworld.com/img/art/glacier_and_snowfield_4.png"
+    "name":"thundersoother",
+    "id":"thundersoother"
   },
   {
-    "set": "Retracing Bolide",
-    "max-rarity": 5,
-    "2-set bonus": "Increases Shield Strength by 35%.",
-    "4-set bonus": "While protected by a shield, gain an additional 40% Normal and Charged Attack DMG.",
-    "img": "https://rerollcdn.com/GENSHIN/Gear/retracing_bolide.png"
+    "name":"tiny miracle",
+    "id":"tiny-miracle"
   },
   {
-    "set": "Thundersoother",
-    "max-rarity": 5,
-    "2-set bonus": "Electro RES increased by 40%",
-    "4-set bonus": "Increases DMG against enemies affected by Electro by 35%.",
-    "img": "https://rerollcdn.com/GENSHIN/Gear/thundersoother.png"
+    "name":"traveling doctor",
+    "id":"traveling-doctor"
   },
   {
-    "set": "Lavawalker",
-    "max-rarity": 5,
-    "2-set bonus": "Pyro RES increased by 40%",
-    "4-set bonus": "Increases DMG against enemies that are Burning or affected by Pyro by 35%.",
-    "img": "https://rerollcdn.com/GENSHIN/Gear/lavawalker.png"
+    "name":"viridescent venerer",
+    "id":"viridescent-venerer"
   },
   {
-    "set": "Maiden Beloved",
-    "max-rarity": 5,
-    "2-set bonus": "Character Healing Effectiveness +15%",
-    "4-set bonus": "Using an Elemental Skill or Burst increases healing received by all party members by 20% for 10s.",
-    "img": "https://rerollcdn.com/GENSHIN/Gear/maiden_beloved.png"
-  },
-  {
-    "set": "Tenacity of the Millelith",
-    "max-rarity": 5,
-    "2-set bonus": "HP increased by 20%.",
-    "4-set bonus": "When an Elemental Skill hits an opponent, the ATK of all nearby party members is increased by 20% and their Shield Strength is increased by 30% for 3s. This effect can be triggered once every 0.5s. This effect can still be triggered even when the character who is using this artifact set is not on the field.",
-    "img": "https://static.wikia.nocookie.net/gensin-impact/images/5/51/Item_Flower_of_Accolades.png/revision/latest?cb=20210416205617"
+    "name":"wanderer's troupe",
+    "id":"wanderer-s-troupe"
   }
 ]
