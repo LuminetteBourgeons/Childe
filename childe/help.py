@@ -48,19 +48,17 @@ class Help(commands.Cog):
     embed3=discord.Embed(
       title='<:pai1:845141679102754836> __Genshin Impact:__', 
       description=
-      "‎ ‎ ‎ ‎ ・*Artifact info:* shows you informations about artifacts\n"
-      "‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ `+ artifact <art. name>` / `+ a <art. name>`\n"
-      "‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ Example: `+a berserker`\n"
-      "‎ ‎ ‎ ‎ ・*Weapon info:* shows you informations about weapons\n"
-      "‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ `+ weapon <weap. name>` / `+ w <weap. name>`\n"
-      "‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ Example: `+w rust`\n"
-      "‎ ‎ ‎ ‎ ・*Experience:* \n"
-      "‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ Info. about what you need for character's & weapon's exp\n"
-      "‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ `+ exp`\n"
-      "‎ ‎ ‎ ‎ ・*Weekly Boss & Talent Books:* \n"
-      "‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ Weekly schedule for Character talent enhancement materials\n"
-      "‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ `+ weekly` / `+ talent`", 
-      color=orange
+      "**For more information, use `+gihelp`**\n"
+      "‎ ‎ ‎ ‎ ・**General information commands**\n"
+      "‎ ‎ ‎ ‎ ・**Artifact commands**\n"
+      "‎ ‎ ‎ ‎ ・**Weapon commands**\n"
+      "‎ ‎ ‎ ‎ ・**Character commands**\n"
+      "\nComming soon:\n"
+      "‎ ‎ ‎ ‎ ・Food & Potion commands\n"
+      "‎ ‎ ‎ ‎ ・Domains commands\n"
+      "‎ ‎ ‎ ‎ ・Material commands\n"
+      "‎ ‎ ‎ ‎ ・Enemies commands\n"
+      ,color=orange
       )
     embed3.set_footer(
       text=f"Serving: {ctx.author.name}", 
@@ -179,6 +177,49 @@ class Help(commands.Cog):
     paginator.add_reaction('⏭️', "last")
     embeds = [embed1, embed2, embed3, embed4, embed5, embed6, embed7, embed8]
     await paginator.run(embeds)
+
+  @commands.command()
+  async def gihelp(self, ctx):
+    embed=discord.Embed(
+      title="__Genshin Impact Commands:__", 
+      description=
+      "‎ ‎ ‎ ‎ ・*Artifact list:* \n"
+      "‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ `+ artifacts`\n"
+      "‎ ‎ ‎ ‎ ・*Artifact info:* shows you informations about artifacts\n"
+      "‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ `+ artifact <art. name>` / `+ a <art. name>`\n"
+      "‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ Example: `+a berserker`\n"
+      "‎ ‎ ‎ ‎ ・*Weapon list:* \n"
+      "‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ `+ weapons`\n"
+      "‎ ‎ ‎ ‎ ・*Weapon info:* shows you informations about weapons\n"
+      "‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ `+ weapon <weap. name>` / `+ w <weap. name>`\n"
+      "‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ Example: `+w rust`\n"
+      "‎ ‎ ‎ ‎ ・*Character list:* \n"
+      "‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ `+ characters`\n"
+      "‎ ‎ ‎ ‎ ・*Character info:* shows you informations about characters\n"
+      "‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ `+ character <chara. name>` / `+ c <chara. name>`\n"
+      "‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ Example: `+c tartaglia`\n"
+      "‎ ‎ ‎ ‎ ・*Experience:* \n"
+      "‎ ‎ ‎ ‎ ・*Nation info:* shows you informations about nations\n"
+      "‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ `+ nation <nation>`\n"
+      "‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ Example: `+nation mondstadt`\n"
+      "‎ ‎ ‎ ‎ ・*Experience:* \n"
+      "‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ Info. about what you need for character's & weapon's exp\n"
+      "‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ `+ exp`\n"
+      "‎ ‎ ‎ ‎ ・*Weekly Boss & Talent Books:* \n"
+      "‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ Weekly schedule for Character talent enhancement materials\n"
+      "‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ `+ weekly` / `+ talent`\n"
+      "‎ ‎ ‎ ‎ ・*Genshin Impact 2021 Calendar:* \n"
+      "‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ `+ gi2021`\n", 
+      color=orange
+      )
+    embed.set_thumbnail(
+      url='https://static.wikia.nocookie.net/gensin-impact/images/5/53/Character_Tartaglia_Thumb.png/revision/latest/smart/width/250/height/250?cb=20210213163935'
+      )
+    embed.set_footer(
+      text=f"Serving: {ctx.author.name}", 
+      icon_url=ctx.author.avatar_url
+      )
+    await ctx.send(embed=embed)
 
   @commands.command()
   async def modhelp(self, ctx):
